@@ -1,118 +1,11 @@
-<mxfile host="65bd71144e" modified="2020-11-11T06:06:13.943Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="25e6YMBNldgOfSs5UZJl" version="13.6.5">
+<mxfile host="65bd71144e" modified="2020-11-11T06:18:55.294Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="C_xZUZF4wzjO1BeiUjWO" version="13.6.5">
     <diagram id="UpYTTQYIfCSQ8dQL7PRC" name="ページ1">
         <mxGraphModel dx="266" dy="635" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="6" value="Kimono" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="240" width="160" height="356" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" value="&lt;font face=&quot;helvetica&quot;&gt;image&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="26" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="7" value="kimono_name_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="6" vertex="1">
-                    <mxGeometry y="56" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="kimono_genre_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="6" vertex="1">
-                    <mxGeometry y="86" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="10" value="&lt;font face=&quot;helvetica&quot;&gt;tpo_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="116" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="&lt;font face=&quot;helvetica&quot;&gt;color_pattern&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="146" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="12" value="&lt;font face=&quot;helvetica&quot;&gt;season&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="176" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="13" value="&lt;font face=&quot;helvetica&quot;&gt;material_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="206" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" value="&lt;font face=&quot;helvetica&quot;&gt;wore_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="236" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="17" value="&lt;font face=&quot;helvetica&quot;&gt;cleaned_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="266" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="15" value="&lt;font face=&quot;helvetica&quot;&gt;memo&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="296" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="19" value="&lt;font face=&quot;helvetica&quot;&gt;user&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
-                    <mxGeometry y="326" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="20" value="Obi" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="240" width="160" height="326" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="&lt;font face=&quot;helvetica&quot;&gt;image&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="26" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="22" value="obi_name_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="20" vertex="1">
-                    <mxGeometry y="56" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="24" value="&lt;font face=&quot;helvetica&quot;&gt;tpo_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="86" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="25" value="&lt;font face=&quot;helvetica&quot;&gt;color_pattern&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="116" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="26" value="&lt;font face=&quot;helvetica&quot;&gt;season&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="146" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="27" value="&lt;font face=&quot;helvetica&quot;&gt;material_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="176" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="28" value="&lt;font face=&quot;helvetica&quot;&gt;wore_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="206" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="29" value="&lt;font face=&quot;helvetica&quot;&gt;cleaned_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="236" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="30" value="&lt;font face=&quot;helvetica&quot;&gt;memo&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="266" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="31" value="&lt;font face=&quot;helvetica&quot;&gt;user&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="20" vertex="1">
-                    <mxGeometry y="296" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="Items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="550" y="240" width="160" height="326" as="geometry"/>
-                </mxCell>
-                <mxCell id="33" value="&lt;font face=&quot;helvetica&quot;&gt;image&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="26" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="34" value="komono_name_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="32" vertex="1">
-                    <mxGeometry y="56" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="36" value="&lt;font face=&quot;helvetica&quot;&gt;tpo_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="86" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="37" value="&lt;font face=&quot;helvetica&quot;&gt;color_pattern&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="116" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="38" value="&lt;font face=&quot;helvetica&quot;&gt;season&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="146" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="39" value="&lt;font face=&quot;helvetica&quot;&gt;material_id&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="176" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="40" value="&lt;font face=&quot;helvetica&quot;&gt;wore_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="206" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="41" value="&lt;font face=&quot;helvetica&quot;&gt;cleaned_date&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="236" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="42" value="&lt;font face=&quot;helvetica&quot;&gt;memo&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="266" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="43" value="&lt;font face=&quot;helvetica&quot;&gt;user&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="32" vertex="1">
-                    <mxGeometry y="296" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=ERmany;endFill=0;" parent="1" source="2" target="20" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="390" y="230" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="2" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="50" width="160" height="116" as="geometry"/>
+                    <mxGeometry x="320" y="50" width="160" height="116" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="nickname" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="2" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
@@ -123,15 +16,26 @@
                 <mxCell id="5" value="password" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="2" vertex="1">
                     <mxGeometry y="86" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERmany;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="6" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="140" y="230" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="6" value="Kimono" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="240" width="160" height="206" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERmany;endFill=0;" parent="1" source="4" target="32" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="630" y="230" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="7" value="kimono_name_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="kimono_genre_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="6" vertex="1">
+                    <mxGeometry y="56" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Item 3&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="86" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Item 3&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="116" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Item 3&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="146" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Item 3&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="176" width="160" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
