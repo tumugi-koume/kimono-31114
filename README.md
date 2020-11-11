@@ -8,6 +8,12 @@
 | email    | string | null: false |
 | password | string | null: false |
 
+### Association
+
+ - has_many :kimonos
+ - has_many :obis
+ - has_many :items
+
 
 ## kimonos テーブル
 
@@ -24,6 +30,11 @@
 | memo            | text       |                   |
 | user            | references | foreign_key: true |
 
+### Association
+
+ - belongs_to :user
+
+
 ## obis テーブル
 
 | Colum           | Type       | Options           |
@@ -38,6 +49,11 @@
 | memo            | text       |                   |
 | user            | references | foreign_key: true |
 
+### Association
+
+ - belongs_to :user
+
+
 ## items テーブル
 
 | Colum           | Type       | Options           |
@@ -51,3 +67,7 @@
 | cleaned_date    | date       |                   |
 | memo            | text       |                   |
 | user            | references | foreign_key: true |
+
+### Association
+
+ - belongs_to :user
