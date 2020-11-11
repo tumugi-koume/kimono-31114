@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <header class="header">
+      <%# ログイン時は、ログアウト・ユーザー名を表示 %>
+      <% if user_signed_in? %>
+        <div class="header_btn">
+          <%= link_to "ログアウト", "#", method: :delete, class: :header_logout %>
+          <%= link_to "ユーザー名", "#", class: :header_button %>
+        </div>
+      <%# 未ログイン時は、新規登録・ログインを表示 %>
+      <% else %>
+        <div class="header_btn">
+          <%= link_to "ログイン", "#", class: :header_button %>
+          <%= link_to "新規登録", "#", class: :header_button %>
+        </div>
+      <% end %>
+    </header>
+
     <%= yield %>
   </body>
 </html>
