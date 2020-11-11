@@ -1,24 +1,73 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Colum    | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+ - has_many :kimonos
+ - has_many :obis
+ - has_many :items
 
-* Configuration
 
-* Database creation
+## kimonos テーブル
 
-* Database initialization
+| Colum           | Type       | Options           |
+| --------------- | ---------- | ----------------- |
+| kimono_name_id  | integer    | null: false       |
+| kimono_genre_id | integer    |                   |
+| tpo_id          | integer    |                   |
+| color_pattern   | text       |                   |
+| season          | string     |                   |
+| material_id     | integer    |                   |
+| wore_date       | date       |                   |
+| cleaned_date    | date       |                   |
+| memo            | text       |                   |
+| user            | references | foreign_key: true |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+ - belongs_to :user
 
-* Deployment instructions
 
-* ...
+## obis テーブル
+
+| Colum           | Type       | Options           |
+| --------------- | ---------- | ----------------- |
+| obi_name_id     | integer    | null: false       |
+| tpo_id          | integer    |                   |
+| color_pattern   | text       |                   |
+| season          | string     |                   |
+| material_id     | integer    |                   |
+| wore_date       | date       |                   |
+| cleaned_date    | date       |                   |
+| memo            | text       |                   |
+| user            | references | foreign_key: true |
+
+### Association
+
+ - belongs_to :user
+
+
+## items テーブル
+
+| Colum           | Type       | Options           |
+| --------------- | ---------- | ----------------- |
+| item_name_id    | integer    | null: false       |
+| tpo_id          | integer    |                   |
+| color_pattern   | text       |                   |
+| season          | string     |                   |
+| material_id     | integer    |                   |
+| wore_date       | date       |                   |
+| cleaned_date    | date       |                   |
+| memo            | text       |                   |
+| user            | references | foreign_key: true |
+
+### Association
+
+ - belongs_to :user
