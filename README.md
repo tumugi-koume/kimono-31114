@@ -1,24 +1,29 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Colum    | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
 
-* System dependencies
+## kimonos テーブル
 
-* Configuration
+| Colum           | Type       | Options           |
+| --------------- | ---------- | ----------------- |
+| kimono_name_id  | integer    | null: false       |
+| kimono_genre_id | integer    |                   |
+| tpo_id          | integer    |                   |
+| color_pattern   | text       |                   |
+| season          | string     |                   |
+| material_id     | integer    |                   |
+| wore_date       | date       |                   |
+| cleaned_date    | date       |                   |
+| memo            | text       |                   |
+| user            | references | foreign_key: true |
 
-* Database creation
+## obis テーブル
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## items テーブル
