@@ -18,7 +18,7 @@ class KimonosController < ApplicationController
   private
 
   def kimono_params
-    params.require(:kimono).permit(:kimono_name_id)
+    params.require(:kimono).permit(:kimono_name_id, :kimono_genre_id)
   end
 
 end
