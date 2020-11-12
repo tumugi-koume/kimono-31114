@@ -27,12 +27,6 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password can't be blank")
     end
 
-    it 'password_confirmationが空だと登録できないこと' do
-      @user.password_confirmation = nil
-      @user.valid?
-      expect(@user.errors.full_messages).to include("Password Confirmation can't be blank")
-    end
-
     it 'nicknameが11文字以上だと登録できないこと' do
       @user.nickname = "あいうえおかきくけこさし"
       @user.valid?
