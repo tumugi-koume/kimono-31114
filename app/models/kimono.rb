@@ -1,0 +1,2 @@
+class Kimono < ApplicationRecord
+end
