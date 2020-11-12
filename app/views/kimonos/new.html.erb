@@ -1,0 +1,7 @@
+<%= form_with model: @kimono, url: kimonos_path, local: true do |f| %>
+  <div class="kimono-box">
+    着物をしまう
+    <%= f.collection_select(:kimono_name_id, KimonoName.all, :id, :name, {}, {class:"kimono-name-select"}) %>
+    <%= f.submit "着物をしまう", class:"btn" %>
+  </div>
+<% end %>
