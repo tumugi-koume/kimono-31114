@@ -6,3 +6,4 @@ ja:
       kimono:
         image: 画像
         kimono_name_id: 種類
+        user: ユーザー
