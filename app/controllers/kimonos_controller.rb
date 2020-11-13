@@ -1,5 +1,5 @@
 class KimonosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show]
 
   def index
     if user_signed_in?
@@ -18,6 +18,10 @@ class KimonosController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @kimono = Kimono.find(params[:id])
   end
 
   private

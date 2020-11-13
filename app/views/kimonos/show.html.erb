@@ -1,0 +1,45 @@
+<%# 画像 %>
+<div class="img-contents">
+  <%= image_tag @kimono.image, class:"img-box"%>
+</div>
+
+<div class="details-box">
+
+  <%# 種類 %>
+  <div class="detail-item">
+    <%= @kimono.kimono_name.name %>
+  </div>
+  <%# 分類 %>
+  <div class="detail-item">
+    <%= @kimono.kimono_genre.name %>
+  </div>
+  <%# TPO %>
+  <div class="detail-item">
+    <%= @kimono.tpo.name %>
+  </div>
+  <%# 色柄 %>
+  <div class="detail-item">
+    <%= @kimono.color_pattern %>
+  </div>
+  <%# 時期 %>
+  <div class="detail-item">
+    <%= @kimono.season %>
+  </div>
+  <%# 材質 %>
+  <div class="detail-item">
+    <%= @kimono.material.name %>
+  </div>
+  <%# 最新着用日 %>
+  <div class="detail-item">
+    <%= @kimono.wore_date %>
+  </div>
+  <%# 最新お手入れ日 %>
+  <div class="detail-item">
+    <%= @kimono.cleaned_date %>
+  </div>
+  <%# メモ %>
+  <div class="detail-item">
+    <%= @kimono.memo %>
+  </div>
+  
+</div>
