@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      kimono:
+        image: 画像
+        kimono_name_id: 種類
