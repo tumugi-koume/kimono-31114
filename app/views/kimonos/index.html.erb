@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
     <% @kimonos.each do |kimono| %>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to kimono_path(kimono.id) do %>
           <%= image_tag kimono.image.variant(resize: '300x300'), class: "kimono-img" if kimono.image.attached?%>
           <div class='info'>
             <div class='kimono-name'>

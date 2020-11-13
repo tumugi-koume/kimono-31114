@@ -1,6 +1,6 @@
 <%# 画像 %>
 <div class="img-contents">
-  <%= image_tag @kimono.image, class:"img-box"%>
+  <%= image_tag @kimono.image.variant(resize: '500x500'), class:"img-box"%>
 </div>
 
 <div class="details-box">
