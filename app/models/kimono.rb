@@ -9,5 +9,4 @@ class Kimono < ApplicationRecord
 
   validates :kimono_name_id, presence: true, numericality: { other_than: 1 }
   validates :image,          presence: true
-  validates :user
 end

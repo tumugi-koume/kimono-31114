@@ -10,5 +10,9 @@ FactoryBot.define do
     cleaned_date    { "2019/04/09" }
     memo            { "臈纈染め" }
     association :user
+
+    after(:build) do |item|
+      item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+    end
   end
 end
