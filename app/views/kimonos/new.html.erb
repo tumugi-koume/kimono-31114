@@ -2,6 +2,14 @@
   <div class="kimono-box">
     <div>着物をしまう</div>
 
+    <div class="img-upload">
+      <div>画像</div>
+      <div class="click-upload">
+        <p>クリックしてファイルをアップロード</p>
+        <%= f.file_field :image, id:"kimono-image" %>
+      </div>
+    </div>
+
     <div>種類</div>
     <%= f.collection_select(:kimono_name_id, KimonoName.all, :id, :name, {}, {class:"kimono-name-select"}) %>
 

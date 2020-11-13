@@ -5,6 +5,8 @@ class Kimono < ApplicationRecord
   belongs_to :tpo
   belongs_to :material
   belongs_to :user
+  has_one_attached :image
 
-  validates :kimono_name_id, numericality: { other_than: 1 }
+  validates :kimono_name_id, presence: true, numericality: { other_than: 1 }
+  validates :image,          presence: true
 end

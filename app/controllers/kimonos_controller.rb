@@ -18,7 +18,7 @@ class KimonosController < ApplicationController
   private
 
   def kimono_params
-    params.require(:kimono).permit(:kimono_name_id, :kimono_genre_id, :tpo_id, :material_id, :color_pattern, :season, :wore_date, :cleaned_date, :memo).merge(user_id: current_user.id)
+    params.require(:kimono).permit(:kimono_name_id, :kimono_genre_id, :tpo_id, :material_id, :color_pattern, :season, :wore_date, :cleaned_date, :memo, :image).merge(user_id: current_user.id)
   end
 
 end
