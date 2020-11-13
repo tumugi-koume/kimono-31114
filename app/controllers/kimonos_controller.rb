@@ -1,7 +1,10 @@
 class KimonosController < ApplicationController
-  before_action :authenticate_user!, expect: [:index]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    if user_signed_in?
+      @kimonos = current_user.kimonos.order("created_at DESC")
+    end
   end
 
   def new
