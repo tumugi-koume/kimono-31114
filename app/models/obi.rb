@@ -1,0 +1,2 @@
+class Obi < ApplicationRecord
+end
