@@ -2,53 +2,49 @@
 
 <%# 画像 %>
 <div class="img-contents">
-  <%= image_tag @kimono.image.variant(resize: '500x500'), class:"img-box"%>
+  <%= image_tag @obi.image.variant(resize: '500x500'), class:"img-box"%>
 </div>
 
 <div class="details-box">
 
   <%# 種類 %>
   <div class="detail-goods">
-    <%= @kimono.kimono_name.name %>
-  </div>
-  <%# 分類 %>
-  <div class="detail-goods">
-    <%= @kimono.kimono_genre.name %>
+    <%= @obi.obi_name.name %>
   </div>
   <%# TPO %>
   <div class="detail-goods">
-    <%= @kimono.tpo.name %>
+    <%= @obi.tpo.name %>
   </div>
   <%# 色柄 %>
   <div class="detail-goods">
-    <%= @kimono.color_pattern %>
+    <%= @obi.color_pattern %>
   </div>
   <%# 時期 %>
   <div class="detail-goods">
-    <%= @kimono.season %>
+    <%= @obi.season %>
   </div>
   <%# 材質 %>
   <div class="detail-goods">
-    <%= @kimono.material.name %>
+    <%= @obi.material.name %>
   </div>
   <%# 最新着用日 %>
   <div class="detail-goods">
-    <%= @kimono.wore_date %>
+    <%= @obi.wore_date %>
   </div>
   <%# 最新お手入れ日 %>
   <div class="detail-goods">
-    <%= @kimono.cleaned_date %>
+    <%= @obi.cleaned_date %>
   </div>
   <%# メモ %>
   <div class="detail-goods">
-    <%= @kimono.memo %>
+    <%= @obi.memo %>
   </div>
   
 </div>
 
 <div>
-  <%= link_to "編集", edit_kimono_path(@kimono.id), class: "post" %>
+  <%= link_to "編集", edit_obi_path(@obi.id), class: "post" %>
 </div>
 <div>
-  <%= link_to "削除", kimono_path(@kimono.id), method: :delete, class: "destroy"%>
+  <%= link_to "削除", obi_path(@obi.id), method: :delete, class: "destroy"%>
 </div>
