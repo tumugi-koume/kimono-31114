@@ -7,3 +7,7 @@ ja:
         image: 画像
         kimono_name_id: 種類
         user: ユーザー
+      obi:
+        image: 画像
+        obi_name_id: 種類
+        user: ユーザー
