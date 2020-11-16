@@ -43,3 +43,10 @@
   </div>
   
 </div>
+
+<div>
+  <%= link_to "編集", edit_kimono_path(@kimono.id), class: "post" %>
+</div>
+<div>
+  <%= link_to "削除", kimono_path(@kimono.id), method: :delete, class: "destroy"%>
+</div>
