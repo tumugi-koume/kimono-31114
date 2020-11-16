@@ -18,7 +18,7 @@
     <% if user_signed_in? %>
       <%= link_to "着物", kimonos_path, class: :header_button %>
       <%= link_to "帯", obis_path, class: :header_button %>
-      <%= link_to "小物", "#", class: :header_button %>
+      <%= link_to "小物", items_path, class: :header_button %>
     <% end %>
   </div>
 </header>
