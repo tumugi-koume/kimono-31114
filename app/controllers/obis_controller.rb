@@ -1,4 +1,5 @@
 class ObisController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit]
 
   def index
     if user_signed_in?
