@@ -1,0 +1,50 @@
+<%= render "share/header" %>
+
+<%# 画像 %>
+<div class="img-contents">
+  <%= image_tag @item.image.variant(resize: '500x500'), class:"img-box"%>
+</div>
+
+<div class="details-box">
+
+  <%# 種類 %>
+  <div class="detail-goods">
+    <%= @item.item_name.name %>
+  </div>
+  <%# TPO %>
+  <div class="detail-goods">
+    <%= @item.tpo.name %>
+  </div>
+  <%# 色柄 %>
+  <div class="detail-goods">
+    <%= @item.color_pattern %>
+  </div>
+  <%# 時期 %>
+  <div class="detail-goods">
+    <%= @item.season %>
+  </div>
+  <%# 材質 %>
+  <div class="detail-goods">
+    <%= @item.material.name %>
+  </div>
+  <%# 最新着用日 %>
+  <div class="detail-goods">
+    <%= @item.wore_date %>
+  </div>
+  <%# 最新お手入れ日 %>
+  <div class="detail-goods">
+    <%= @item.cleaned_date %>
+  </div>
+  <%# メモ %>
+  <div class="detail-goods">
+    <%= @item.memo %>
+  </div>
+  
+</div>
+
+<div>
+  <%= link_to "編集", edit_item_path(@item.id), class: "post" %>
+</div>
+<div>
+  <%= link_to "削除", item_path(@item.id), method: :delete, class: "destroy"%>
+</div>
