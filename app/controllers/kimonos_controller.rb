@@ -24,6 +24,17 @@ class KimonosController < ApplicationController
     @kimono = Kimono.find(params[:id])
   end
 
+  def edit
+  end
+  
+  def update
+    if @kimono.update(kimono_params)
+      redirect_to kimono_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def kimono_params
