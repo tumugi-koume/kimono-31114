@@ -1,5 +1,6 @@
 class KimonosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit]
+  before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit]
 
   def index
@@ -22,15 +23,12 @@ class KimonosController < ApplicationController
   end
 
   def show
-    @kimono = Kimono.find(params[:id])
   end
 
   def edit
-    @kimono = Kimono.find(params[:id])
   end
   
   def update
-    @kimono = Kimono.find(params[:id])
     if @kimono.update(kimono_params)
       redirect_to kimono_path
     else
@@ -38,10 +36,19 @@ class KimonosController < ApplicationController
     end
   end
 
+  def destroy
+    if @kimono.destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
-  def redirect_root
+  def find_kimono
     @kimono = Kimono.find(params[:id])
+  end
+
+  def redirect_root
     if current_user != @kimono.user
       redirect_to root_path
     end
