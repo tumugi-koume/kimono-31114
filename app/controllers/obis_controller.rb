@@ -13,7 +13,7 @@ class ObisController < ApplicationController
   def create
     @obi = Obi.new(obi_params)
     if @obi.save
-      redirect_to root_path
+      redirect_to obis_path
     else
       render :new
     end
