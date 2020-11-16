@@ -22,6 +22,9 @@ class ObisController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def find_obi
