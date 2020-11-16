@@ -1,0 +1,27 @@
+<%= render "share/header" %>
+
+<h1>帯の一覧</h1>
+
+<div>
+  <%= link_to "帯をしまう", new_obi_path, class: "post" %>
+</div>
+
+<div class='contents'>
+  <div class='title'>帯</div>
+  <ul class='lists'>
+    <% if user_signed_in? %>
+    <% @obis.each do |obi| %>
+      <li class='list'>
+        <%= link_to obi_path(obi.id) do %>
+          <%= image_tag obi.image.variant(resize: '300x300'), class: "goods-img" if obi.image.attached?%>
+          <div class='info'>
+            <div class='goods-name'>
+              <%= obi.obi_name.name %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
