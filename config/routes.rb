@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to:'kimonos#index'
   resources :kimonos
   resources :obis
+  resources :items
 end
