@@ -1,0 +1,24 @@
+<%= render "share/header" %>
+
+<%= form_with model: @item, url: items_path, local: true do |f| %>
+  <div class="goods-box">
+    <div>小物をしまう</div>
+
+    <%# <%= render "share/obi_error_messages", model: f.object %> %>
+
+    <div class="img-upload">
+      <div>画像</div>
+      <div class="click-upload">
+        <p>クリックしてファイルをアップロード</p>
+        <%= f.file_field :image, id:"goods-image" %>
+      </div>
+    </div>
+
+    <div>種類</div>
+    <%= f.collection_select(:item_name_id, ItemName.all, :id, :name, {}, {class:"item-name-select"}) %>
+
+    <%= render partial: "share/form", locals: { f: f } %>
+
+    <%= f.submit "タンスにしまう", class:"btn" %>
+  </div>
+<% end %>
