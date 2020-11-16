@@ -1,0 +1,27 @@
+<%= render "share/header" %>
+
+<h1>小物の一覧</h1>
+
+<div>
+  <%= link_to "小物をしまう", new_item_path, class: "post" %>
+</div>
+
+<div class='contents'>
+  <div class='title'>小物</div>
+  <ul class='lists'>
+    <% if user_signed_in? %>
+    <% @items.each do |obi| %>
+      <li class='list'>
+        <%= link_to item_path(item.id) do %>
+          <%= image_tag item.image.variant(resize: '300x300'), class: "goods-img" if item.image.attached?%>
+          <div class='info'>
+            <div class='goods-name'>
+              <%= item.item_name.name %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
