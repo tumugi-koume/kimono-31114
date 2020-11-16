@@ -25,6 +25,23 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @obi.update(obi_params)
+      redirect_to obi_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @obi.destroy
+      redirect_to obis_path
+    end
+  end
+
   private
 
   def find_item
