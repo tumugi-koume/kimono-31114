@@ -1,5 +1,6 @@
 class KimonosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit]
+  before_action :redirect_root, only: [:show, :edit]
 
   def index
     if user_signed_in?
@@ -38,6 +39,13 @@ class KimonosController < ApplicationController
   end
 
   private
+
+  def redirect_root
+    @kimono = Kimono.find(params[:id])
+    if current_user != @kimono.user
+      redirect_to root_path
+    end
+  end
 
   def kimono_params
     params.require(:kimono).permit(:kimono_name_id, :kimono_genre_id, :tpo_id, :material_id, :color_pattern, :season, :wore_date, :cleaned_date, :memo, :image).merge(user_id: current_user.id)
