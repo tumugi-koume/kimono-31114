@@ -11,3 +11,7 @@ ja:
         image: 画像
         obi_name_id: 種類
         user: ユーザー
+      item:
+        image: 画像
+        item_name_id: 種類
+        user: ユーザー
