@@ -1,5 +1,5 @@
 class ObisController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit]
+  before_action :authenticate_user!
   before_action :find_obi, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit, :destroy]
 
@@ -23,6 +23,23 @@ class ObisController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @obi.update(obi_params)
+      redirect_to obi_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @obi.destroy
+      redirect_to obis_path
+    end
   end
 
   private
