@@ -25,9 +25,11 @@ class KimonosController < ApplicationController
   end
 
   def edit
+    @kimono = Kimono.find(params[:id])
   end
   
   def update
+    @kimono = Kimono.find(params[:id])
     if @kimono.update(kimono_params)
       redirect_to kimono_path
     else

@@ -1,4 +1,4 @@
-<%= form_with model: @kimono, url: kimono_path("#"), local: true do |f| %>
+<%= form_with model: @kimono, url: kimono_path(@kimono.id), local: true do |f| %>
   <div class="kimono-box">
     <div>編集</div>
 
