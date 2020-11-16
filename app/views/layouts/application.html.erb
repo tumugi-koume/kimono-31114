@@ -15,7 +15,7 @@
       <% if user_signed_in? %>
         <div class="header_btn">
           <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :header_logout %>
-          <%= link_to "ユーザー名", "#", class: :header_button %>
+          <%= link_to "#{current_user.nickname}", "#", class: :header_button %>
         </div>
       <%# 未ログイン時は、新規登録・ログインを表示 %>
       <% else %>
