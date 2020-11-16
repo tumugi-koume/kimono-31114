@@ -1,7 +1,7 @@
 class KimonosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit]
   before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
-  before_action :redirect_root, only: [:show, :edit]
+  before_action :redirect_root, only: [:show, :edit, :destroy]
 
   def index
     if user_signed_in?
