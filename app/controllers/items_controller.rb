@@ -29,16 +29,16 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @obi.update(obi_params)
-      redirect_to obi_path
+    if @item.update(item_params)
+      redirect_to item_path
     else
       render :edit
     end
   end
 
   def destroy
-    if @obi.destroy
-      redirect_to obis_path
+    if @item.destroy
+      redirect_to items_path
     end
   end
 
