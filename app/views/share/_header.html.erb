@@ -1,33 +1,35 @@
 <header class="header">
 
-  <%# ロゴ画像 %>
-  <%= link_to image_tag("kimono_logo.png", class:"kimono_logo"), "/" %>
+  <div class="header_logo">
+    <%# ロゴ画像 %>
+    <%= link_to image_tag("kimono_logo.png", class:"kimono_logo"), "/" %>
 
-  <%# メニュー %>
-  <div class="nemu">
-    <%= image_tag "menu_logo.png", class:"menu_logo" %>
+    <%# メニュー %>
+    <div class="nemu">
+      <%= image_tag "menu_logo.png", class:"menu_logo" %>
 
-    <%# ログイン時は、ログアウト・ユーザー名を表示 %>
-    <% if user_signed_in? %>
-      <div class="header_btn">
-        <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :header_logout %>
-        <%= link_to "#{current_user.nickname}", "#", class: :header_button %>
-      </div>
-    <%# 未ログイン時は、新規登録・ログインを表示 %>
-    <% else %>
-      <div class="header_btn">
-        <%= link_to "ログイン", new_user_session_path, class: :header_button %>
-        <%= link_to "新規登録", new_user_registration_path, class: :header_button %>
-      </div>
-    <% end %>
-
-    <%# 各一覧ページへのリンク %>
-    <div class="to-index-links">
+      <%# ログイン時は、ログアウト・ユーザー名を表示 %>
       <% if user_signed_in? %>
-        <%= link_to "着物", kimonos_path, class: :header_button %>
-        <%= link_to "帯", obis_path, class: :header_button %>
-        <%= link_to "小物", items_path, class: :header_button %>
+        <div class="header_btn">
+          <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :header_logout %>
+          <%= link_to "#{current_user.nickname}", "#", class: :header_button %>
+        </div>
+      <%# 未ログイン時は、新規登録・ログインを表示 %>
+      <% else %>
+        <div class="header_btn">
+          <%= link_to "ログイン", new_user_session_path, class: :header_button %>
+          <%= link_to "新規登録", new_user_registration_path, class: :header_button %>
+        </div>
       <% end %>
+
+      <%# 各一覧ページへのリンク %>
+      <div class="to-index-links">
+        <% if user_signed_in? %>
+          <%= link_to "着物", kimonos_path, class: :header_button %>
+          <%= link_to "帯", obis_path, class: :header_button %>
+          <%= link_to "小物", items_path, class: :header_button %>
+        <% end %>
+      </div>
     </div>
   </div>
 </header>

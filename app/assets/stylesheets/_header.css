@@ -1,0 +1,15 @@
+.header{
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.header_logo{
+  padding: 25px, 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_logo{
+  width: 70px;
+  height: 70px;
+}
