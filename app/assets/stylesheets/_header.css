@@ -3,13 +3,17 @@
   padding: 2vh 5vw;
 }
 
-.header_logo{
+.header-logo{
   padding: 25px, 25px;
   display: flex;
   justify-content: space-between;
 }
 
-.menu_logo{
+.menu-logo{
   width: 70px;
   height: 70px;
+}
+
+.hidden{
+  display: none;
 }

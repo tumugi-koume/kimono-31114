@@ -1,15 +1,18 @@
-window.addEventListener('load', function(){
+function pullDown(){
+
   const pullDownButton = document.getElementById("menu")
+  const pullDownParents = document.getElementById("pull-down")
 
-  // pullDownButton.addEventListener('mouseover', function(){
-  //   console.log("mouseover OK")
-  // })
-
-  // pullDownButton.addEventListener('mouseout', function(){
-  //   console.log("mouseout OK")
-  // })
-
-  pullDownButton.addEventListener('click', function(){
-    console.log("click OK")
+  pullDownButton.addEventListener('mouseover', function(){
+    pullDownParents.setAttribute("style", "display:block;")
   })
-})
+
+  pullDownButton.addEventListener('mouseout', function(){
+    pullDownParents.removeAttribute("style", "display:none;")
+  })
+
+  // pullDownButton.addEventListener('click', function(){
+  // })
+}
+
+window.addEventListener('load', pullDown)
