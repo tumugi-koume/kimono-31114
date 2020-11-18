@@ -1,30 +1,29 @@
 
 <header class="header">
-
   <div class="header-logo">
     <%# ロゴ画像 %>
     <%= link_to image_tag("kimono_logo.png", class:"kimono_logo"), "/" %>
 
     <%# メニュー %>
     <div class="menu" id="menu">
-      <%= image_tag "menu_logo.png", class:"menu-logo" %>
+      <%= image_tag "menu_logo.png", class:"menu-logo", id:"menu-logo" %>
 
       <%# メニューのプルダウン %>
       <div class="menu-lists hidden" id="pull-down">
         <%# 未ログイン時は、新規登録・ログインを表示 %>
         <% unless user_signed_in? %>
-          <div class="not-login-menu">
+          <ul class="not-login-menu">
             <li class="menu-bar">
-              <%= link_to "ログイン", new_user_session_path, class: :headerbutton %>
+              <%= link_to "ログイン", new_user_session_path, class: :header_button %>
             </li>
             <li class="menu-bar">
               <%= link_to "新規登録", new_user_registration_path, class: :header_button %>
             </li>
-          </div>
+          </ul>
         <% end %>
 
         <%# ログイン中のメニュー %>
-        <div class="now-login-menu">
+        <ul class="now-login-menu">
           <% if user_signed_in? %>
             <li class="menu-bar">
               <%= link_to "着物", kimonos_path, class: :header_button %>
@@ -39,10 +38,10 @@
               <%= link_to "#{current_user.nickname}", "#", class: :header_button %>
             </li>
             <li class="menu-bar">
-              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :header_logout %>
+              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :header_button %>
             </li>
           <% end %>
-        </div>
+        </ul>
       </div>
 
     </div>
