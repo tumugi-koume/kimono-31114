@@ -1,29 +1,35 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimonos/index.css">
 
-<h1>トップページ</h1>
+  <div class="index-page">
 
-<div>
-  <%= link_to "着物をしまう", new_kimono_path, class: "post" %>
-</div>
+    <div class="index-header">
+      <h1 class="index-title">着物</h1>
+    </div>
 
-<div class='contents'>
-  <div class='title'>きもの</div>
-  <ul class='lists'>
-    <% if user_signed_in? %>
-    <% @kimonos.each do |kimono| %>
-      <li class='list'>
-        <%= link_to kimono_path(kimono.id) do %>
-          <%= image_tag kimono.image.variant(resize: '300x300'), class: "goods-img" if kimono.image.attached?%>
-          <div class='info'>
-            <div class='goods-name'>
-              <%= kimono.kimono_name.name %>
-            </div>
-          </div>
+    <hr class="line">
+
+    <div class="put-away-btn">
+      <%= link_to "着物をしまう", new_kimono_path, class: "put-away" %>
+    </div>
+      
+    <div class='contents'>
+      <ul class='lists'>
+        <% if user_signed_in? %>
+        <% @kimonos.each do |kimono| %>
+          <li class='list'>
+            <%= link_to kimono_path(kimono.id) do %>
+              <%= image_tag kimono.image.variant(resize: '300x300'), class: "goods-img" if kimono.image.attached?%>
+              <div class='info'>
+                <div class='goods-name'>
+                  <%= kimono.kimono_name.name %>
+                </div>
+              </div>
+            <% end %>
+          </li>
         <% end %>
-      </li>
-    <% end %>
-    <% end %>
-  </ul>
-</div>
-
+        <% end %>
+      </ul>
+    </div>
+  </div>
 <%= render "share/footer" %>
