@@ -1,0 +1,51 @@
+.header{
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.header-logo{
+  padding: 25px 25px ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden{
+  display: none;
+}
+
+.menu{
+  width: 400px;
+  height: 100px;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.menu-logo{
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-lists{
+  height: 180px;
+  padding: 15px 20px 15px 20px;
+  border: 2px solid #2e3740;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.now-login-menu, .not-login-menu {
+  list-style-type: none;
+}
+
+.header_button {
+  text-decoration: none;
+}
+
+.menu-bar {
+  margin: auto 30px;
+}
