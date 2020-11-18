@@ -1,7 +1,9 @@
 footer {
   width: 100vw;
+  background-color: white;
   height: 250px;
   padding: 2vh 5vw;
+  margin-top: auto;
   text-align: center;
   position: relative;
 }
