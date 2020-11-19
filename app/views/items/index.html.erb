@@ -1,27 +1,36 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimonos/index.css">
 
-<h1>小物の一覧</h1>
+<div class="index-page">
 
-<div>
-  <%= link_to "小物をしまう", new_item_path, class: "post" %>
-</div>
+  <div class="index-header">
+    <h1 class="index-title">小物</h1>
+  </div>
 
-<div class='contents'>
-  <div class='title'>小物</div>
-  <ul class='lists'>
-    <% if user_signed_in? %>
-    <% @items.each do |item| %>
-      <li class='list'>
-        <%= link_to item_path(item.id) do %>
-          <%= image_tag item.image.variant(resize: '300x300'), class: "goods-img" if item.image.attached?%>
-          <div class='info'>
-            <div class='goods-name'>
-              <%= item.item_name.name %>
+  <hr class="line">
+
+  <div class="put-away-btn">
+    <%= link_to "小物をしまう", new_item_path, class: "put-away" %>
+  </div>
+
+  <div class='contents'>
+    <ul class='lists'>
+      <% if user_signed_in? %>
+      <% @items.each do |item| %>
+        <li class='list'>
+          <%= link_to item_path(item.id) do %>
+            <%= image_tag item.image.variant(resize: '300x300'), class: "goods-img" if item.image.attached?%>
+            <div class='info'>
+              <div class='goods-name'>
+                <%= item.item_name.name %>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </li>
-    <% end %>
-    <% end %>
-  </ul>
+          <% end %>
+        </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+<%= render "share/footer" %>
