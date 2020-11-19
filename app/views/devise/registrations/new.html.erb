@@ -17,7 +17,7 @@
           <%= f.label :nickname %>（10文字まで）<br />
         </div>
         <div class="field-holder">
-          <%= f.text_field :nickname, autofocus: true, maxlength: "10" %>
+          <%= f.text_field :nickname, autofocus: true, maxlength: "10" , class: 'field-holder'%>
         </div>
       </div>
 
@@ -26,7 +26,7 @@
           <%= f.label :email %><br />
         </div>
         <div class="field-holder">
-          <%= f.email_field :email, autocomplete: "email" %>
+          <%= f.email_field :email, autocomplete: "email", class: 'field-holder' %>
         </div>
       </div>
 
@@ -38,7 +38,7 @@
           <% end %><br />
         </div>
         <div class="field-holder">
-          <%= f.password_field :password, autocomplete: "new-password" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: 'field-holder' %>
         </div>
       </div>
 
@@ -47,12 +47,12 @@
           <%= f.label :password_confirmation %><br />
         </div>
         <div class="field-holder">
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'field-holder' %>
         </div>
       </div>
 
       <div class="submit">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "登録", class: 'sign-btn' %>
       </div>
       <%= render "devise/shared/links" %>
     <% end %>
