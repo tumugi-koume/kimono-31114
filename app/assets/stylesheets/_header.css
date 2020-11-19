@@ -1,5 +1,6 @@
 .header{
   width: 100vw;
+  height: 35vh;
   padding: 2vh 5vw;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .menu-lists{
-  height: 180px;
+  height: 200px;
   padding: 15px 20px 15px 20px;
   border: 2px solid #2e3740;
   writing-mode: vertical-rl;
