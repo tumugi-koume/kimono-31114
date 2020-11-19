@@ -34,7 +34,7 @@
 }
 
 .field-holder {
-  min-width: 300px;
+  min-width: 350px;
   width: 25vw;
   height: 30px;
   font-size: 17px;
@@ -53,4 +53,8 @@
   height: 50px;
   font-size: 20px;
   background-color: white;
+}
+
+.login-flash-message {
+  margin-bottom: 40px;
 }

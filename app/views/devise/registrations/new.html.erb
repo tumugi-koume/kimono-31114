@@ -10,6 +10,7 @@
 
   <div class="form">
     <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+    
       <%= render "devise/shared/error_messages", model: f.object %>
 
       <div class="field">
