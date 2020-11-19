@@ -1,0 +1,6 @@
+.error_message {
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}

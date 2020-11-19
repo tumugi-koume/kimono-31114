@@ -1,0 +1,60 @@
+.sign-page {
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.log-header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 35px;
+  writing-mode: vertical-rl;
+}
+
+.form {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  margin-bottom: 30px;
+}
+
+.field-name {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+.field-holder {
+  min-width: 350px;
+  width: 25vw;
+  height: 30px;
+  font-size: 17px;
+}
+
+.submit {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-btn {
+  width: 15vw;
+  min-width: 120px;
+  height: 50px;
+  font-size: 20px;
+  background-color: white;
+}
+
+.login-flash-message {
+  margin-bottom: 40px;
+}

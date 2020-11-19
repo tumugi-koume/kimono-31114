@@ -1,34 +1,62 @@
-<h2>新規登録</h2>
+<%= render "share/header" %>
+<link rel="stylesheet" href="devise/new.css">
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <%= render "devise/shared/error_messages", model: f.object %>
-
-  <div class="field">
-    <%= f.label :nickname %>10文字まで<br />
-    <%= f.text_field :nickname, autofocus: true, maxlength: "10" %>
+<div class="sign-page">
+  <div class="log-header">
+    <h2 class="title">新規登録</h2>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
-  </div>
+  <hr class="line">
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <%= @minimum_password_length %>文字以上
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+  <div class="form">
+    <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+    
+      <%= render "devise/shared/error_messages", model: f.object %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="field">
+        <div class="field-name">
+          <%= f.label :nickname %>（10文字まで）<br />
+        </div>
+        <div class="field-holder">
+          <%= f.text_field :nickname, autofocus: true, maxlength: "10" , class: 'field-holder'%>
+        </div>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="field">
+        <div class="field-name">
+          <%= f.label :email %><br />
+        </div>
+        <div class="field-holder">
+          <%= f.email_field :email, autocomplete: "email", class: 'field-holder' %>
+        </div>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="field">
+        <div class="field-name">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          （<%= @minimum_password_length %>文字以上）
+          <% end %><br />
+        </div>
+        <div class="field-holder">
+          <%= f.password_field :password, autocomplete: "new-password", class: 'field-holder' %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field-name">
+          <%= f.label :password_confirmation %><br />
+        </div>
+        <div class="field-holder">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'field-holder' %>
+        </div>
+      </div>
+
+      <div class="submit">
+        <%= f.submit "登録", class: 'sign-btn' %>
+      </div>
+      <%= render "devise/shared/links" %>
+    <% end %>
+  </div>
+</div>
+<%= render "share/footer" %>
