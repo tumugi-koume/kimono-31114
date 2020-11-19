@@ -1,0 +1,47 @@
+.sign-up {
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.registration-header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 35px;
+  writing-mode: vertical-rl;
+}
+
+.form {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  margin-bottom: 30px;
+}
+
+.field-name {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+input {
+  min-width: 300px;
+  width: 25vw;
+  height: 30px;
+  font-size: 17px;
+}
+
+.submit {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
