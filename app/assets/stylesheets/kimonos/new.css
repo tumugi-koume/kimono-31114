@@ -1,0 +1,34 @@
+.new-page {
+  width: 100vw;
+  padding: 2vh 5vw;
+}
+
+.new-header {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-title {
+  font-size: 35px;
+  margin-bottom: 40px;
+  writing-mode: vertical-rl;
+}
+
+.new-form {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-upload {
+  margin-bottom: 30px;
+}
+
+.field {
+  margin-bottom: 30px;
+}
