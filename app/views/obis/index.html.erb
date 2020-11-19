@@ -1,27 +1,36 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimono/index.css">
 
-<h1>帯の一覧</h1>
+<div class="index-page">
 
-<div>
-  <%= link_to "帯をしまう", new_obi_path, class: "post" %>
-</div>
+  <div class="index-header">
+    <h1 class="index-title">帯</h1>
+  </div>
 
-<div class='contents'>
-  <div class='title'>帯</div>
-  <ul class='lists'>
-    <% if user_signed_in? %>
-    <% @obis.each do |obi| %>
-      <li class='list'>
-        <%= link_to obi_path(obi.id) do %>
-          <%= image_tag obi.image.variant(resize: '300x300'), class: "goods-img" if obi.image.attached?%>
-          <div class='info'>
-            <div class='goods-name'>
-              <%= obi.obi_name.name %>
+  <hr class="line">
+
+  <div class="put-away-btn">
+    <%= link_to "帯をしまう", new_obi_path, class: "put-away" %>
+  </div>
+
+  <div class='contents'>
+    <ul class='lists'>
+      <% if user_signed_in? %>
+      <% @obis.each do |obi| %>
+        <li class='list'>
+          <%= link_to obi_path(obi.id) do %>
+            <%= image_tag obi.image.variant(resize: '300x300'), class: "goods-img" if obi.image.attached?%>
+            <div class='info'>
+              <div class='goods-name'>
+                <%= obi.obi_name.name %>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </li>
-    <% end %>
-    <% end %>
-  </ul>
+          <% end %>
+        </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+<%= render "share/footer" %>
