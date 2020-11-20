@@ -9,13 +9,13 @@
 </div>
 
 <div class="field">
-  <div class="field-name">着られる時期</div>
-  <%= f.text_area :season, class:"goods-text", id:"season-text", placeholder:"着用時期（40文字まで）", maxlength:"40" %>
+  <div class="field-name">時期</div>
+  <%= f.text_area :season, class:"goods-text", id:"season-text", placeholder:"着られる季節（40文字まで）", maxlength:"40" %>
 </div>
 
 <div class="field">
-  <div class="field-name">色や柄</div>
-  <%= f.text_area :color_pattern, class:"goods-text", id:"color_pattern_text", placeholder:"色や柄（40文字まで）", maxlength:"40" %>
+  <div class="field-name">色・柄</div>
+  <%= f.text_area :color_pattern, class:"goods-text", id:"color_pattern_text", placeholder:"（40文字まで）", maxlength:"40" %>
 </div>
 
 
@@ -35,7 +35,7 @@
 </div>
 
 <div class="field">
-  <div class="field-name">直近お手入れ日</div>
+  <div class="field-name">お手入れ日</div>
   <%= raw sprintf(
               f.date_select(
                 :cleaned_date,
@@ -51,5 +51,5 @@
 
 <div class="field">
   <div class="field-name">メモ</div>
-  <%= f.text_area :memo, class:"goods-text", id:"memo_text", placeholder:"作家さんの名前やどこで購入したのか、など（40文字まで）", maxlength:"40" %>
+  <%= f.text_area :memo, class:"goods-text", id:"memo_text", placeholder:"（40文字まで）", maxlength:"40" %>
 </div
