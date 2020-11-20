@@ -1,10 +1,10 @@
-.edit-page {
+.show-page {
   width: 100vw;
   padding: 2vh 5vw;
   text-align: center;
 }
 
-.goods-name-edit {
+.goods-name-show {
   margin-top: 10vh;
   margin-bottom: 4vh;
   font-size: 25px;
