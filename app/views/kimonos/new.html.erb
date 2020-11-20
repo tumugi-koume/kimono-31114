@@ -1,28 +1,45 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimonos/new.css">
 
-<%= form_with model: @kimono, url: kimonos_path, local: true do |f| %>
-  <div class="goods-box">
-    <div>着物をしまう</div>
+<div class="new-page">
 
-    <%= render "share/error_messages", model: f.object %>
-
-    <div class="img-upload">
-      <div>画像</div>
-      <div class="click-upload">
-        <p>クリックしてファイルをアップロード</p>
-        <%= f.file_field :image, id:"goods-image" %>
-      </div>
-    </div>
-
-    <div>種類</div>
-    <%= f.collection_select(:kimono_name_id, KimonoName.all, :id, :name, {}, {class:"kimono-name-select"}) %>
-
-    <div>分類</div>
-    <%= f.collection_select(:kimono_genre_id, KimonoGenre.all, :id, :name, {}, {class:"kimono-genre-select"}) %>
-
-    <%= render partial: "share/form", locals: { f: f } %>
-
-
-    <%= f.submit "タンスにしまう", class:"btn" %>
+  <div class="new-header">
+    <h2 class="new-title">着物をしまう</h2>
   </div>
-<% end %>
+
+  <hr class="line">
+
+  <div class="new-form">
+    <%= form_with model: @kimono, url: kimonos_path, local: true do |f| %>
+
+      <%= render "share/error_messages", model: f.object %>
+
+
+        <div class="img-upload">
+          <div class="field-name">画像</div>
+          <div class="click-upload">
+            <p>クリックしてファイルをアップロード</p>
+            <%= f.file_field :image, id:"goods-image" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-name">種類</div>
+          <%= f.collection_select(:kimono_name_id, KimonoName.all, :id, :name, {}, {class:"pulldown-select"}) %>
+        </div>
+
+        <div class="field">
+          <div class="field-name">分類</div>
+          <%= f.collection_select(:kimono_genre_id, KimonoGenre.all, :id, :name, {}, {class:"pulldown-select"}) %>
+        </div>
+
+        <%= render partial: "share/form", locals: { f: f } %>
+
+
+      <div class="new-submit">
+        <%= f.submit "タンスにしまう", class: 'goods-rgbtn' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "share/footer" %>

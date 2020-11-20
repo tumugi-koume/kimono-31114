@@ -1,47 +1,55 @@
-<div class="input-detail">
-  <div>TPO</div>
-  <%= f.collection_select(:tpo_id, Tpo.all, :id, :name, {}, {class:"tpo-select"}) %>
-
-  <div>素材</div>
-  <%= f.collection_select(:material_id, Material.all, :id, :name, {}, {class:"material-select"}) %>
-
-  <div>着られる時期</div>
-  <%= f.text_area :season, class:"season-text", id:"season-text", placeholder:"着用時期（40文字まで）", maxlength:"40" %>
-
-  <div>色や柄</div>
-  <%= f.text_area :color_pattern, class:"color_pattern_text", id:"color_pattern_text", placeholder:"色や柄（40文字まで）", maxlength:"40" %>
-
-  <div class="input-wore-date">
-    <div>最近着た日</div>
-    <%= raw sprintf(
-                f.date_select(
-                  :wore_date,
-                  class:'select-wore-date',
-                  id:"wore-date",
-                  use_month_numbers: true,
-                  prompt:'---',
-                  start_year: 2020,
-                  end_year: (Time.now.year + 1),
-                  date_separator: '%s'),
-                "年", "月") + "日" %>
-  </div>
-
-  <div class="input-cleaned-date">
-    <div>直近お手入れ日</div>
-    <%= raw sprintf(
-                f.date_select(
-                  :cleaned_date,
-                  class:'select-cleaned-date',
-                  id:"cleaned-date",
-                  use_month_numbers: true,
-                  prompt:'---',
-                  start_year: 2010,
-                  end_year: (Time.now.year + 1),
-                  date_separator: '%s'),
-                "年", "月") + "日" %>
-  </div>
-
-  <div>メモ</div>
-  <%= f.text_area :memo, class:"memo_text", id:"memo_text", placeholder:"作家さんの名前やどこで購入したのか、など（40文字まで）", maxlength:"40" %>
-
+<div class="field">
+  <div class="field-name">TPO</div>
+  <%= f.collection_select(:tpo_id, Tpo.all, :id, :name, {}, {class:"pulldown-select"}) %>
 </div>
+
+<div class="field">
+  <div class="field-name">素材</div>
+  <%= f.collection_select(:material_id, Material.all, :id, :name, {}, {class:"pulldown-select"}) %>
+</div>
+
+<div class="field">
+  <div class="field-name">着られる時期</div>
+  <%= f.text_area :season, class:"goods-text", id:"season-text", placeholder:"着用時期（40文字まで）", maxlength:"40" %>
+</div>
+
+<div class="field">
+  <div class="field-name">色や柄</div>
+  <%= f.text_area :color_pattern, class:"goods-text", id:"color_pattern_text", placeholder:"色や柄（40文字まで）", maxlength:"40" %>
+</div>
+
+
+<div class="field">
+  <div class="field-name">最近着た日</div>
+  <%= raw sprintf(
+              f.date_select(
+                :wore_date,
+                class:'select-date',
+                id:"wore-date",
+                use_month_numbers: true,
+                prompt:'---',
+                start_year: 2020,
+                end_year: (Time.now.year + 1), 
+                date_separator: '%s'),
+                "年", "月") + "日" %>
+</div>
+
+<div class="field">
+  <div class="field-name">直近お手入れ日</div>
+  <%= raw sprintf(
+              f.date_select(
+                :cleaned_date,
+                class:'select-date',
+                id:"cleaned-date",
+                use_month_numbers: true,
+                prompt:'---',
+                start_year: 2010,
+                end_year: (Time.now.year + 1),
+                date_separator: '%s'),
+                "年", "月") + "日" %>
+</div>
+
+<div class="field">
+  <div class="field-name">メモ</div>
+  <%= f.text_area :memo, class:"goods-text", id:"memo_text", placeholder:"作家さんの名前やどこで購入したのか、など（40文字まで）", maxlength:"40" %>
+</div
