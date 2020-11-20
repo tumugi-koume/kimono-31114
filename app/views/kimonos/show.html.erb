@@ -1,54 +1,68 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimonos/edit.css">
 
-<%# 画像 %>
-<div class="img-contents">
-  <%= image_tag @kimono.image.variant(resize: '500x500'), class:"img-box"%>
-</div>
+<hr class="line">
 
-<div class="details-box">
-
-  <%# 種類 %>
-  <div class="detail-goods">
+<div class="edit-page">
+  <div class="goods-name">
     <%= @kimono.kimono_name.name %>
   </div>
-  <%# 分類 %>
-  <div class="detail-goods">
-    <%= @kimono.kimono_genre.name %>
-  </div>
-  <%# TPO %>
-  <div class="detail-goods">
-    <%= @kimono.tpo.name %>
-  </div>
-  <%# 色柄 %>
-  <div class="detail-goods">
-    <%= @kimono.color_pattern %>
-  </div>
-  <%# 時期 %>
-  <div class="detail-goods">
-    <%= @kimono.season %>
-  </div>
-  <%# 材質 %>
-  <div class="detail-goods">
-    <%= @kimono.material.name %>
-  </div>
-  <%# 最新着用日 %>
-  <div class="detail-goods">
-    <%= @kimono.wore_date %>
-  </div>
-  <%# 最新お手入れ日 %>
-  <div class="detail-goods">
-    <%= @kimono.cleaned_date %>
-  </div>
-  <%# メモ %>
-  <div class="detail-goods">
-    <%= @kimono.memo %>
-  </div>
-  
-</div>
 
-<div>
-  <%= link_to "編集", edit_kimono_path(@kimono.id), class: "post" %>
+  <div class="show-img-contents">
+    <%= image_tag @kimono.image.variant(resize: '500x500'), class:"img-box"%>
+  </div>
+
+  <div class="details-box">
+
+    <div class="detail-goods">
+      <div class="detail-name">分類</div>
+      <%= @kimono.kimono_genre.name %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">TPO</div>
+      <%= @kimono.tpo.name %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">素材</div>
+      <%= @kimono.material.name %>
+    </div>
+
+    <div class="detail-name-text">着られる時期</div>
+    <div class="detail-goods-text">
+      <%= @kimono.season %>
+    </div>
+
+    <div class="detail-name-text">色・柄</div>
+    <div class="detail-goods-text">
+      <%= @kimono.color_pattern %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">最近着た日</div>
+      <%= @kimono.wore_date %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">直近お手入れ日</div>
+      <%= @kimono.cleaned_date %>
+    </div>
+
+    <div class="detail-name-text">メモ</div>
+    <div class="detail-goods-text">
+      <%= @kimono.memo %>
+    </div>
+
+  </div>
+
+  <div class="edit-btn">
+    <%= link_to "編集", edit_kimono_path(@kimono.id), class: "edit" %>
+  </div>
+
+  <div class="destroy-btn">
+    <%= link_to "削除", kimono_path(@kimono.id), method: :delete, class: "destroy"%>
+  </div>
+
 </div>
-<div>
-  <%= link_to "削除", kimono_path(@kimono.id), method: :delete, class: "destroy"%>
-</div>
+<%= render "share/footer" %>
