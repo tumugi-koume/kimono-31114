@@ -1,0 +1,58 @@
+.show-page {
+  width: 100vw;
+  padding: 2vh 5vw;
+  text-align: center;
+}
+
+.goods-name-show {
+  margin-top: 10vh;
+  margin-bottom: 4vh;
+  font-size: 25px;
+}
+
+.img-box {
+  min-width:  35vw;
+  min-height: 35vh;
+  object-fit: contain;
+  margin-bottom: 5vh;
+}
+
+.details-box {
+  width: 40vw;
+  margin: 0 auto ;
+  margin-bottom: 90px;
+}
+
+.detail-goods {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+.detail-name {
+  width: 100px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: start;
+}
+
+.detail-text {
+  width: calc(100% - 100px);
+  display: flex;
+  justify-content: start;
+}
+
+.edit-btn {
+  margin-bottom: 60px;
+}
+
+.edit {
+  font-size: 20px;
+  padding: 15px;
+  border: 2px solid #2e3740;
+  text-decoration: none;
+}
+
+.destroy-btn {
+  margin-bottom: 40px;
+}
