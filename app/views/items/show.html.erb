@@ -1,50 +1,61 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimonos-edit.css">
 
-<%# 画像 %>
-<div class="img-contents">
-  <%= image_tag @item.image.variant(resize: '500x500'), class:"img-box"%>
-</div>
+<div class="show-page">
 
-<div class="details-box">
+  <hr class="line">
 
-  <%# 種類 %>
-  <div class="detail-goods">
+  <div class="goods-name-show">
     <%= @item.item_name.name %>
   </div>
-  <%# TPO %>
-  <div class="detail-goods">
-    <%= @item.tpo.name %>
-  </div>
-  <%# 色柄 %>
-  <div class="detail-goods">
-    <%= @item.color_pattern %>
-  </div>
-  <%# 時期 %>
-  <div class="detail-goods">
-    <%= @item.season %>
-  </div>
-  <%# 材質 %>
-  <div class="detail-goods">
-    <%= @item.material.name %>
-  </div>
-  <%# 最新着用日 %>
-  <div class="detail-goods">
-    <%= @item.wore_date %>
-  </div>
-  <%# 最新お手入れ日 %>
-  <div class="detail-goods">
-    <%= @item.cleaned_date %>
-  </div>
-  <%# メモ %>
-  <div class="detail-goods">
-    <%= @item.memo %>
-  </div>
-  
-</div>
 
-<div>
-  <%= link_to "編集", edit_item_path(@item.id), class: "post" %>
+  <div class="show-img-contents">
+    <%= image_tag @item.image.variant(resize: '500x500'), class:"img-box"%>
+  </div>
+
+  <div class="details-box">
+
+    <div class="detail-goods">
+      <div class="detail-name">TPO</div>
+      <%= @item.tpo.name %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">素材</div>
+      <%= @item.material.name %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">時期</div>
+      <div class="detail-text"><%= @item.season %></div>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">色・柄</div>
+      <div class="detail-text"><%= @item.color_pattern %></div>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">最近着た日</div>
+      <%= @item.wore_date %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">お手入れ日</div>
+      <%= @item.cleaned_date %>
+    </div>
+
+    <div class="detail-goods">
+      <div class="detail-name">メモ</div>
+      <div class="detail-text"><%= @item.memo %></div>
+    </div>
+  </div>
+
+  <div class="edit-btn">
+    <%= link_to "編集", edit_item_path(@item.id), class: "edit" %>
+  </div>
+  <div class="destroy-bnt">
+    <%= link_to "削除", item_path(@item.id), method: :delete, class: "destroy"%>
+  </div>
 </div>
-<div>
-  <%= link_to "削除", item_path(@item.id), method: :delete, class: "destroy"%>
-</div>
+<%= render "share/footer" %>
