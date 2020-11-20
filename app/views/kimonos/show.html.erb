@@ -1,10 +1,11 @@
 <%= render "share/header" %>
 <link rel="stylesheet" href="kimonos/edit.css">
 
-<hr class="line">
-
 <div class="edit-page">
-  <div class="goods-name">
+
+  <hr class="line">
+
+  <div class="goods-name-edit">
     <%= @kimono.kimono_name.name %>
   </div>
 
@@ -29,14 +30,14 @@
       <%= @kimono.material.name %>
     </div>
 
-    <div class="detail-name-text">着られる時期</div>
-    <div class="detail-goods-text">
-      <%= @kimono.season %>
+    <div class="detail-goods">
+      <div class="detail-name">時期</div>
+      <div class="detail-text"><%= @kimono.season %></div>
     </div>
 
-    <div class="detail-name-text">色・柄</div>
-    <div class="detail-goods-text">
-      <%= @kimono.color_pattern %>
+    <div class="detail-goods">
+      <div class="detail-name">色・柄</div>
+      <div class="detail-text"><%= @kimono.color_pattern %></div>
     </div>
 
     <div class="detail-goods">
@@ -45,13 +46,13 @@
     </div>
 
     <div class="detail-goods">
-      <div class="detail-name">直近お手入れ日</div>
+      <div class="detail-name">お手入れ日</div>
       <%= @kimono.cleaned_date %>
     </div>
 
-    <div class="detail-name-text">メモ</div>
-    <div class="detail-goods-text">
-      <%= @kimono.memo %>
+    <div class="detail-goods">
+      <div class="detail-name">メモ</div>
+      <div class="detail-text"><%= @kimono.memo %></div>
     </div>
 
   </div>
