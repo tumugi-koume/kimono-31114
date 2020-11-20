@@ -1,24 +1,38 @@
 <%= render "share/header" %>
+<link rel="stylesheet" href="kimono/new.css">
 
-<%= form_with model: @item, url: item_path(@item.id), local: true do |f| %>
-  <div class="edit-box">
-    <div>編集</div>
+<div class="new-page">
 
-    <%= render "share/item_error_messages", model: f.object %>
-
-    <div class="img-upload">
-      <div>画像</div>
-      <div class="click-upload">
-        <p>クリックしてファイルをアップロード</p>
-        <%= f.file_field :image, id:"goods-image" %>
-      </div>
-    </div>
-
-    <div>種類</div>
-    <%= f.collection_select(:item_name_id, ItemName.all, :id, :name, {}, {class:"item-name-select"}) %>
-
-    <%= render partial: "share/form", locals: { f: f } %>
-
-    <%= f.submit "編集", class:"btn" %>
+  <div class="new-header">
+    <h2 class="new-title">編集</h2>
   </div>
-<% end %>
+
+  <hr class="line">
+
+  <div class="new-form">
+    <%= form_with model: @item, url: item_path(@item.id), local: true do |f| %>
+
+      <%= render "share/item_error_messages", model: f.object %>
+
+      <div class="img-upload">
+        <div>画像</div>
+        <div class="click-upload">
+          <p>クリックしてファイルをアップロード</p>
+          <%= f.file_field :image, id:"goods-image" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field-name">種類</div>
+        <%= f.collection_select(:item_name_id, ItemName.all, :id, :name, {}, {class:"pulldown-select"}) %>
+      </div>
+
+      <%= render partial: "share/form", locals: { f: f } %>
+
+      <div class="new-submit">
+        <%= f.submit "編集", class:"goods-rgbtn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "share/footer" %>
