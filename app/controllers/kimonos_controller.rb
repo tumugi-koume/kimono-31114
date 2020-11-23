@@ -49,6 +49,7 @@ class KimonosController < ApplicationController
       set_kimono_column
     end
     @results = @p.result.includes(:kimono_name)
+    binding.pry
   end
 
   private
@@ -72,6 +73,6 @@ class KimonosController < ApplicationController
   end
 
   def set_kimono_column
-    @kimono_name = Kimono.select("kimono_name").distinct
+    @kimono_name = Kimono.select("kimono_name_id").distinct
   end
 end
