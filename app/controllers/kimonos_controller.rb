@@ -2,7 +2,7 @@ class KimonosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit]
   before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit, :destroy]
-  # before_action :search_goods, only: [:search]
+  before_action :search_goods, only: [:search]
 
   def index
     if user_signed_in?
@@ -44,8 +44,10 @@ class KimonosController < ApplicationController
   end
 
   def search
-    # @goods = Kimono.all
-    # @result = @p.result.includes(:tpo)
+    if user_signed_in?
+      @kimonos = current_user.kimonos.order("created_at DESC")
+    end
+    @result = @p.result.includes(:tpo)
   end
 
   private
@@ -64,7 +66,7 @@ class KimonosController < ApplicationController
     params.require(:kimono).permit(:kimono_name_id, :kimono_genre_id, :tpo_id, :material_id, :color_pattern, :season, :wore_date, :cleaned_date, :memo, :image).merge(user_id: current_user.id)
   end
 
-  # def search_goods
-  #   @p = Kimono.ransack(params[:q])
-  # end
+  def search_goods
+    @p = Kimono.ransack(params[:q])
+  end
 end
