@@ -1,0 +1,15 @@
+<h1>
+  検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+      <%= result.kimono_name.name %>
+    </li>
+  <% end %>
+
+<br>
+<%= link_to 'トップページへ戻る', root_path %>

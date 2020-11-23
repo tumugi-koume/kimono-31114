@@ -2,7 +2,7 @@ class KimonosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit]
   before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit, :destroy]
-  before_action :search_goods, only: [:search]
+  before_action :search_goods, only: [:search, :result]
 
   def index
     if user_signed_in?
@@ -48,8 +48,10 @@ class KimonosController < ApplicationController
       @kimonos = current_user.kimonos.order("created_at DESC")
       set_kimono_column
     end
-    @results = @p.result.includes(:kimono_name)
-    binding.pry
+  end
+
+  def result
+    @results = @p.result
   end
 
   private

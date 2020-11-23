@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :kimonos do
     collection do
       get 'search'
+      get 'result'
     end
   end
   resources :obis
