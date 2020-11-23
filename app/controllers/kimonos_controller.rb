@@ -77,5 +77,7 @@ class KimonosController < ApplicationController
   def set_kimono_column
     @kimono_name = Kimono.select("kimono_name_id").distinct
     @kimono_genre = Kimono.select("kimono_genre_id").distinct
+    @kimono_tpo = Kimono.select("tpo_id").distinct
+    @kimono_material = Kimono.select("material_id").distinct
   end
 end

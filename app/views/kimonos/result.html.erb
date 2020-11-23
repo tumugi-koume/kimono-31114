@@ -7,6 +7,7 @@
     <td>
     <br>
     <li>
+      <%= image_tag result.image.variant(resize: '300x300'), class: "goods-img" if result.image.attached?%>
       <%= result.kimono_name.name %>
     </li>
   <% end %>
