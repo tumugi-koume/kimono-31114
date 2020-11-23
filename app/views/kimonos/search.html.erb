@@ -1,0 +1,8 @@
+<h2>検索</h2>
+
+<%= search_form_for @p, url: kimonos_search_path do |f| %>
+  <%= f.label :tpo_eq, 'TPO' %>
+  <%= f.collection_select :tpo_eq, @kimonos, :tpo_id, :tpo,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
