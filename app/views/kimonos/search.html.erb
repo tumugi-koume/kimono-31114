@@ -1,6 +1,6 @@
 <%= search_form_for @p, url: search_kimonos_path do |f| %>
-  <%= f.label :memo_eq, '種類' %>
-  <%= f.collection_select :memo_eq, @kimonos, :memo, :memo,  include_blank: '指定なし' %>
+  <%= f.label :kimono_name_id_eq, '種類' %>
+  <%= f.collection_select :kimono_name_id_eq, KimonoName.all, :id, :name,  include_blank: '指定なし' %>
   <br>
   <%= f.submit '検索' %>
 <% end %>

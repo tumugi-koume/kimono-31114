@@ -46,8 +46,9 @@ class KimonosController < ApplicationController
   def search
     if user_signed_in?
       @kimonos = current_user.kimonos.order("created_at DESC")
+      set_kimono_column
     end
-    @result = @p.result.includes(:tpo)
+    @results = @p.result.includes(:kimono_name)
   end
 
   private
@@ -68,5 +69,9 @@ class KimonosController < ApplicationController
 
   def search_goods
     @p = Kimono.ransack(params[:q])
+  end
+
+  def set_kimono_column
+    @kimono_name = Kimono.select("kimono_name").distinct
   end
 end
