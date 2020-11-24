@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_item, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit, :destroy]
+  before_action :search_goods, only: [:search, :result]
 
   def index
     if user_signed_in? 
@@ -42,6 +43,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def search
+    if user_signed_in?
+      @items = current_user.items.order("created_at DESC")
+    end
+  end
+
+  def result
+    @result = @p.result.order("created_at DESC")
+  end
+
   private
 
   def find_item
@@ -56,5 +67,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:item_name_id, :tpo_id, :material_id, :color_pattern, :season, :wore_date, :cleaned_date, :memo, :image).merge(user_id: current_user.id)
+  end
+  
+  def search_goods
+    @p = Item.ransack(params[:q])
   end
 end
