@@ -1,25 +1,46 @@
-<%= search_form_for @p, url:  result_kimonos_path do |f| %>
-  <%= f.label :kimono_name_id_eq, '種類' %>
-  <%= f.collection_select :kimono_name_id_eq, KimonoName.all, :id, :name,  include_blank: '指定なし' %>
-  <%= f.label :kimono_genre_id_eq, '分類' %>
-  <%= f.collection_select :kimono_genre_id_eq, KimonoGenre.all, :id, :name,  include_blank: '指定なし' %>
-  <%= f.label :tpo_id_eq, 'TPO' %>
-  <%= f.collection_select :tpo_id_eq, Tpo.all, :id, :name,  include_blank: '指定なし' %>
-  <%= f.label :material_id_eq, '素材' %>
-  <%= f.collection_select :material_id_eq, Material.all, :id, :name,  include_blank: '指定なし' %>
+<%= render "share/header" %>
+<link rel="stykesheet" href="kimono/new.css">
 
-  <%= f.label :season_cont, '時期、色・柄、メモ' %>
-  <%= f.search_field :season_or_color_pattern_or_memo_cont %>
+<div class="new-page">
 
-  <br>
-  <%= f.submit '検索' %>
-    <br>
-    <% @kimonos.each do |kimono| %>
-    <td>
-    <br>
-    <li>
-      <%= image_tag kimono.image.variant(resize: '300x300'), class: "goods-img" if kimono.image.attached?%>
-      <%= kimono.kimono_name.name %>
-    </li>
+  <div class="new-header">
+    <h2 class="new-title">着物検索</h2>
+  </div>
+
+  <hr class="line">
+
+  <div class="new-form">
+    <%= search_form_for @p, url:  result_kimonos_path do |f| %>
+
+      <div class="field">
+        <div class="field-name">種類</div>
+        <%= f.collection_select :kimono_name_id_eq, KimonoName.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-select"} %>
+      </div>
+
+      <div class="field">
+        <div class="field-name">分類</div>
+        <%= f.collection_select :kimono_genre_id_eq, KimonoGenre.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-select"} %>
+      </div>
+
+      <div class="field">
+        <div class="field-name">TPO</div>
+        <%= f.collection_select :tpo_id_eq, Tpo.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-select"} %>
+      </div>
+
+      <div class="field">
+        <div class="field-name">素材</div>
+        <%= f.collection_select :material_id_eq, Material.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-name"} %>
+      </div>
+
+      <div class="field">
+        <div class="field-name">時期、色・柄、メモ</div>
+        <%= f.search_field :season_or_color_pattern_or_memo_cont, class:"goods-text" %>
+      </div>
+
+      <div class="new-submit">
+        <%= f.submit '検索', class: 'goods-rgbtn' %>
+      </div>
+
     <% end %>
-<% end %>
+  </div>
+</div>
