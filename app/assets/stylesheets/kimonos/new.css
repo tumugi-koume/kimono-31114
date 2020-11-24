@@ -1,6 +1,7 @@
-/* .new-page {
+.new-page {
   width: 100vw;
   padding: 2vh 5vw;
+  text-align: center;
 }
 
 .new-header {
@@ -17,62 +18,65 @@
 }
 
 .new-form {
-  width: 100%;
-  margin-top: 70px;
-  margin-bottom: 90px;
+  width: 350px;
+  margin: 90px auto 90px auto;
+}
+
+.field{
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+}
+
+.field-name{
+  width: 100px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: start;
 }
 
 .img-upload {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: start;
 }
 
-.field {
-  min-width: 300px;
-  width: 30vw;
-  padding: auto;
-  margin-bottom: 30px;
-}
-
-.field-name {
-  margin-bottom: 15px;
+.click-upload {
+  max-width: calc(100% - 100px);
+  width: 40vw;
+  height: 80px;
   font-size: 17px;
+  font-family: serif;
 }
 
 .pulldown-select {
-  min-width: 200px;
+  max-width: calc(100% - 100px);
   width: 25vw;
   height: 30px;
   font-size: 17px;
   font-family: serif;
 }
 
-.goods-text {
-  min-width: 300px;
-  width: 30vw;
-  height: 100px;
+.search-text {
+  max-width: calc(100% - 100px);
+  width: 25vw;
+  height: 30px;
   font-family: serif;
 }
 
-.new-submit {
-  width: 100vw;
-  padding: 2vh 5vw;
-  margin-top: 100px;
-  margin-bottom: 40px;
-  position: relative;
+.goods-text {
+  width: calc(100% - 100px);
+  height: 170px;
+  display: flex;
+  justify-content: start;
 }
 
 .goods-rgbtn {
   width: 15vw;
   min-width: 150px;
   height: 50px;
+  margin-top: 70px;
   font-size: 20px;
   font-family: serif;
   background-color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
+} 
