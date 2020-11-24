@@ -1,0 +1,30 @@
+<%= render "share/header" %>
+
+<div class="index-page">
+
+  <div class="index-header">
+    <h2 class="index-title">検索結果</h2>
+  </div>
+
+  <hr class="line">
+
+  <div class="result-contents">
+    <ul class="lists">
+    <% @results.each do |result| %>
+      <li class="list">
+        <%= link_to kimono_path(result.id) do %>
+          <%= image_tag result.image.variant(resize: '300x300'), class: "goods-img" if result.image.attached?%>
+          <div class="info">
+            <div class="goods-name">
+              <%= result.kimono_name.name %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+
+  <%= link_to '着物検索に戻る',  search_kimonos_path, class: "link-btn" %>
+</div>
+<%= render "share/footer" %>

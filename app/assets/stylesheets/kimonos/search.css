@@ -1,4 +1,4 @@
-.new-page {
+/* .new-page {
   width: 100vw;
   padding: 2vh 5vw;
   text-align: center;
@@ -35,20 +35,6 @@
   justify-content: start;
 }
 
-.img-upload {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: start;
-}
-
-.click-upload {
-  max-width: calc(100% - 100px);
-  width: 40vw;
-  height: 80px;
-  font-size: 17px;
-  font-family: serif;
-}
-
 .pulldown-select {
   max-width: calc(100% - 100px);
   width: 25vw;
@@ -57,18 +43,11 @@
   font-family: serif;
 }
 
-.search-text {
+.goods-text {
   max-width: calc(100% - 100px);
   width: 25vw;
   height: 30px;
   font-family: serif;
-}
-
-.goods-text {
-  width: calc(100% - 100px);
-  height: 170px;
-  display: flex;
-  justify-content: start;
 }
 
 .goods-rgbtn {
@@ -79,4 +58,4 @@
   font-size: 20px;
   font-family: serif;
   background-color: white;
-} 
+}  */
