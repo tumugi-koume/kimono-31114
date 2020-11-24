@@ -3,3 +3,59 @@
   padding: 2vh 5vw;
   text-align: center;
 }
+
+.new-header {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-title {
+  font-size: 35px;
+  margin-bottom: 40px;
+  writing-mode: vertical-rl;
+}
+
+.new-form {
+  width: 350px;
+  margin: 90px auto 90px auto;
+}
+
+.field{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: start;
+}
+
+.field-name{
+  width: 100px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: start;
+}
+
+.pulldown-select {
+  max-width: calc(100% - 100px);
+  width: 25vw;
+  height: 30px;
+  font-size: 17px;
+  font-family: serif;
+}
+
+.goods-text {
+  max-width: calc(100% - 100px);
+  width: 25vw;
+  height: 30px;
+  font-family: serif;
+}
+
+.goods-rgbtn {
+  width: 15vw;
+  min-width: 150px;
+  height: 50px;
+  margin-top: 70px;
+  font-size: 20px;
+  font-family: serif;
+  background-color: white;
+} 

@@ -29,11 +29,11 @@
 
       <div class="field">
         <div class="field-name">素材</div>
-        <%= f.collection_select :material_id_eq, Material.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-name"} %>
+        <%= f.collection_select :material_id_eq, Material.all, :id, :name,  {include_blank: '指定なし'}, {class:"pulldown-select"} %>
       </div>
 
       <div class="field">
-        <div class="field-name">時期、色・柄、メモ</div>
+        <div class="field-name">時期<br />色柄<br />メモ</div>
         <%= f.search_field :season_or_color_pattern_or_memo_cont, class:"goods-text" %>
       </div>
 
@@ -44,3 +44,4 @@
     <% end %>
   </div>
 </div>
+<%= render "share/footer" %>
