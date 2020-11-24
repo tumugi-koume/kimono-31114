@@ -12,13 +12,14 @@
     <ul class="lists">
     <% @results.each do |result| %>
       <li class="list">
-        
-        <%= image_tag result.image.variant(resize: '300x300'), class: "goods-img" if result.image.attached?%>
-        <div class="info">
-          <div class="goods-name">
-            <%= result.kimono_name.name %>
+        <%= link_to kimono_path(result.id) do %>
+          <%= image_tag result.image.variant(resize: '300x300'), class: "goods-img" if result.image.attached?%>
+          <div class="info">
+            <div class="goods-name">
+              <%= result.kimono_name.name %>
+            </div>
           </div>
-        </div>
+        <% end %>
       </li>
     <% end %>
     </ul>
