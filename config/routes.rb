@@ -8,6 +8,16 @@ Rails.application.routes.draw do
       get 'result'
     end
   end
-  resources :obis
-  resources :items
+  resources :obis do
+    collection do
+      get 'search'
+      get 'result'
+    end
+  end
+  resources :items do
+    collection do
+      get 'search'
+      get 'result'
+    end
+  end
 end
