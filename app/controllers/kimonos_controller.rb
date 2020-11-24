@@ -79,5 +79,8 @@ class KimonosController < ApplicationController
     @kimono_genre = Kimono.select("kimono_genre_id").distinct
     @kimono_tpo = Kimono.select("tpo_id").distinct
     @kimono_material = Kimono.select("material_id").distinct
+    @kimono_text = Kimono.select("season", "color_pattern")
+    # @kimono_color_pattern = Kimono.select("color_pattern")
+    
   end
 end
