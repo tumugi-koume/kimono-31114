@@ -1,7 +1,7 @@
 class KimonosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show, :edit]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :search, :result]
   before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
-  before_action :redirect_root, only: [:show, :edit, :destroy]
+  before_action :redirect_root, only: [:show, :edit, :destroy, :search]
   before_action :search_goods, only: [:search, :result]
 
   def index
