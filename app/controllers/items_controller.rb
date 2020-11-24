@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
   end
 
   def result
-    @result = @p.result.order("created_at DESC")
+    @results = @p.result.order("created_at DESC")
   end
 
   private
