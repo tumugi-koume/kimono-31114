@@ -1,6 +1,8 @@
 .index-page {
   width: 100vw;
   padding: 2vh 5vw;
+  text-align: center;
+
 }
 
 .index-header {
@@ -34,6 +36,13 @@
 
 .contents {
   width: 100%;
+  margin-bottom: 80px;
+}
+
+.result-contents {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .lists {
@@ -63,4 +72,9 @@
   margin-left: 5vw;
   font-size: 17px;
   text-decoration: none;
+}
+
+.link-btn {
+  margin-bottom: 40px;
+  font-size: 17px;
 }
