@@ -54,7 +54,7 @@ Password... test33
 ## 実装した機能についての説明
 
 ・各登録機能<br>
-'[demo](https://raw.github.com/wiki/tumugi-koume/gif/index.image.gif/)'
+'![demo](https://raw.github.com/wiki/tumugi-koume/gif/index.image.gif/)'
 https://gyazo.com/e88fe43a82967be5fa6cd956c21474bb
 着用できるTPOや、時期、そのアイテムの素材、以前着た日、お手入れした日など、着物を着る女性が実際着用する際に意識していることを、情報として保存できるようにしました。
 また、項目の入力にプルダウンを多く実装することで、手間を少なく登録できるようにしました。
