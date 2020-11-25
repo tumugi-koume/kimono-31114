@@ -155,6 +155,7 @@ https://gyazo.com/69affb70dce2412224d8fa4674f1a02f
 
 
 ### ER図
+<img width="675" alt="kimono-31114_ER図" src="https://user-images.githubusercontent.com/72288311/100189144-0ba0fb80-2f2f-11eb-8e1e-13a127e08bd3.png">
 
 ## ローカルでの動作方法
 
