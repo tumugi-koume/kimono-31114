@@ -1,5 +1,5 @@
 class KimonosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show, :edit]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :search, :result]
   before_action :find_kimono, only: [:show, :edit, :update, :destroy, :redirect_root]
   before_action :redirect_root, only: [:show, :edit, :destroy]
   before_action :search_goods, only: [:search, :result]
@@ -46,7 +46,6 @@ class KimonosController < ApplicationController
   def search
     if user_signed_in?
       @kimonos = current_user.kimonos.order("created_at DESC")
-      set_kimono_column
     end
   end
 
@@ -74,13 +73,4 @@ class KimonosController < ApplicationController
     @p = Kimono.ransack(params[:q])
   end
 
-  def set_kimono_column
-    @kimono_name = Kimono.select("kimono_name_id").distinct
-    @kimono_genre = Kimono.select("kimono_genre_id").distinct
-    @kimono_tpo = Kimono.select("tpo_id").distinct
-    @kimono_material = Kimono.select("material_id").distinct
-    @kimono_text = Kimono.select("season", "color_pattern")
-    # @kimono_color_pattern = Kimono.select("color_pattern")
-    
-  end
 end
