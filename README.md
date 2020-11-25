@@ -54,23 +54,22 @@ Password... test33
 ## 実装した機能についての説明
 
 ・各登録機能<br>
-'![demo](https://raw.github.com/wiki/tumugi-koume/gif/index.image.gif/)'
-https://gyazo.com/e88fe43a82967be5fa6cd956c21474bb
+'![demo](https://raw.github.com/wiki/tumugi-koume/kimono-31114/gif/new.image.gif)'<br>
 着用できるTPOや、時期、そのアイテムの素材、以前着た日、お手入れした日など、着物を着る女性が実際着用する際に意識していることを、情報として保存できるようにしました。
 また、項目の入力にプルダウンを多く実装することで、手間を少なく登録できるようにしました。
 
-・各一覧機能
-https://gyazo.com/0e894c8cc0993aa0096b587171f2b620
+・各一覧機能<br>
+'![demo](https://raw.github.com/wiki/tumugi-koume/kimono-31114/gif/index.image.gif)'<br>
 実際にユーザーが持っているアイテムが一覧で見られるよう実装しました。
 画像と種類名のみ表示することで、見やすく、しかし、どんなものを持っていたか全体的に把握できることを意識しました。
 
-・各詳細機能
-https://gyazo.com/96d2a4a9c03d60736e8cfb91d0eb48bf
+・各詳細機能<br>
+'![demo](https://raw.github.com/wiki/tumugi-koume/kimono-31114/gif/show.image.gif)'<br>
 登録した情報を一目で見られます。
 編集ボタンを設置することで、簡単に情報の変更を行えるようにしました。
 
-・各検索機能
-https://gyazo.com/69affb70dce2412224d8fa4674f1a02f
+・各検索機能<br>
+'![demo](https://raw.github.com/wiki/tumugi-koume/kimono-31114/gif/search.image.gif)'<br>
 プルダウンでの検索ができ、より簡単に検索を行うことが可能です。
 
 ## 実装予定の機能
