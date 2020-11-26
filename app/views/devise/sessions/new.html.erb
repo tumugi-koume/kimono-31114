@@ -1,14 +1,13 @@
 <%= render "share/header" %>
-<link rel="stylesheet" href="devise/new.css">
 
 <div class="sign-page">
   <div class="log-header">
-    <h2 class="title">ログイン</h2>
+    <h2 class="user-title">ログイン</h2>
   </div>
 
   <hr class="line">
 
-  <div class="form">
+  <div class="user-form">
     <%= form_with model: @user, url: user_session_path, class: 'session-main', local: true do |f| %>
 
       <div class='login-flash-message'>
@@ -16,8 +15,8 @@
         <%= flash[:alert] %>
       </div>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :email %><br />
         </div>
         <div class="field-holder">
@@ -25,8 +24,8 @@
         </div>
       </div>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :password %><br />
         </div>
         <div class="field-holder">
@@ -35,7 +34,7 @@
       </div>
 
       <% if devise_mapping.rememberable? %>
-        <div class="field">
+        <div class="user-field">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>

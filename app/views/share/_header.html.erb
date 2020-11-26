@@ -48,11 +48,11 @@
 
       <%# 検索 %>
       <div class="menu" id="menu">
-        <%= image_tag "search_logo.png", class:"menu-logo", id:"menu-logo" %>
+        <%= image_tag "search_logo.png", class:"search-logo", id:"search-logo" %>
 
         <%# 検索のプルダウン %>
-        <div class="menu-lists" id="pull-down">
-          <ul class="search-menu">
+        <div class="menu-lists hidden" id="search-pull-down">
+          <ul class="search-menu" id="search-menu-pulldown">
             <li class="menu-bar">
               <%= link_to "着物", search_kimonos_path, class: :header_button %>
             </li>
@@ -67,4 +67,3 @@
       </div> 
     </div>
 </header>
-<script scr="_header.js"></script>

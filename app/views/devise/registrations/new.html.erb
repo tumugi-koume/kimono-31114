@@ -1,29 +1,28 @@
 <%= render "share/header" %>
-<link rel="stylesheet" href="devise/new.css">
 
 <div class="sign-page">
   <div class="log-header">
-    <h2 class="title">新規登録</h2>
+    <h2 class="user-title">新規登録</h2>
   </div>
 
   <hr class="line">
 
-  <div class="form">
+  <div class="user-form">
     <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
     
       <%= render "devise/shared/error_messages", model: f.object %>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :nickname %>（10文字まで）<br />
         </div>
-        <div class="field-holder">
+        <div class="user-field-holder">
           <%= f.text_field :nickname, autofocus: true, maxlength: "10" , class: 'field-holder'%>
         </div>
       </div>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :email %><br />
         </div>
         <div class="field-holder">
@@ -31,8 +30,8 @@
         </div>
       </div>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :password %>
           <% if @minimum_password_length %>
           （<%= @minimum_password_length %>文字以上）
@@ -43,8 +42,8 @@
         </div>
       </div>
 
-      <div class="field">
-        <div class="field-name">
+      <div class="user-field">
+        <div class="user-field-name">
           <%= f.label :password_confirmation %><br />
         </div>
         <div class="field-holder">

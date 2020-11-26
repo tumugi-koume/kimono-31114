@@ -67,6 +67,7 @@
 .goods-text {
   width: calc(100% - 100px);
   height: 170px;
+  font-family: serif;
   display: flex;
   justify-content: start;
 }

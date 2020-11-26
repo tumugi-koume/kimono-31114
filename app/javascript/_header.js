@@ -1,23 +1,43 @@
 function pullDown(){
 
-  const pullDownButton = document.getElementById("menu-logo")
-  const pullDownLists = document.getElementById("pull-down")
-  const pullDownParents = document.getElementById("pull-down")
+  // 検索
+  const searchButton = document.getElementById("search-logo")
+  const searchParents = document.getElementById("search-pull-down")
 
-  pullDownButton.addEventListener('mouseover', function(){
-    pullDownParents.setAttribute("style", "display:block;")
+  searchButton.addEventListener('mouseover', function(){
+    this.setAttribute("style", "opacity: 0.5;")
   })
 
-  pullDownLists.addEventListener('mouseover', function(){
-    pullDownParents.setAttribute("style", "display:block;")
+  searchButton.addEventListener('mouseout', function(){
+    this.removeAttribute("style", "opacity: 0.5;")
   })
 
-  pullDownButton.addEventListener('mouseout', function(){
-    pullDownParents.removeAttribute("style", "display:none;")
+  searchButton.addEventListener('click', function(){
+    if (searchParents.getAttribute("style") == "display:block;"){
+      searchParents.removeAttribute("style", "display:block;")
+    } else {
+      searchParents.setAttribute("style", "display:block;")
+    }
   })
 
-  pullDownLists.addEventListener('mouseout', function(){
-    pullDownParents.removeAttribute("style", "display:none;")
+  // メニュー
+  const menuButton = document.getElementById("menu-logo")
+  const menuParents =document.getElementById("pull-down")
+
+  menuButton.addEventListener('mouseover', function(){
+    this.setAttribute("style", "opacity: 0.5;")
+  })
+
+  menuButton.addEventListener('mouseout', function(){
+    this.removeAttribute("style", "opacity: 0.5;")
+  })
+
+  menuButton.addEventListener('click', function(){
+    if (menuParents.getAttribute("style") == "display:block;"){
+      menuParents.removeAttribute("style", "display:block;")
+    } else {
+      menuParents.setAttribute("style", "display:block;")
+    }
   })
 
 }
