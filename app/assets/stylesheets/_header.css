@@ -1,6 +1,6 @@
 .header{
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   padding: 2vh 5vw;
   padding: 25px 25px ;
   display: flex;
@@ -14,11 +14,10 @@
 }
 
 .logos {
-  /* width: 400px; */
-  /* height: 100px; */
+  /* width: 130px; */
+  /* height: 60px; */
   display: flex;
   justify-content: flex-end;
-  /* border: 1px solid red; */
 }
 
 .menu {
@@ -37,6 +36,13 @@
   margin-right: auto; */
 }
 
+.search-logo{
+  width: 60px;
+  height: 60px;
+  margin-left: 100px;
+  margin-right: 30px;
+}
+
 .menu-lists{
   height: 200px;
   padding: 15px 20px 15px 20px;
@@ -45,20 +51,19 @@
   text-orientation: upright;
   margin-left: auto;
   margin-right: auto;
-  text-decoration: none;
   /* position: absolute;
   margin-top: 0;
   margin-right: 0; */
 }
 
-/* .now-login-menu, .not-login-menu {
+.now-login-menu, .not-login-menu, .search-menu {
   list-style-type: none;
 }
 
-.header_button {
+/* .header_button {
   text-decoration: none;
-}
+} */
 
 .menu-bar {
-  margin: auto 30px;
-}  */
+  margin: auto 15px;
+} 
