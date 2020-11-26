@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* background-color: wheat; */
 }
 
 .hidden{
@@ -14,8 +13,6 @@
 }
 
 .logos {
-  /* width: 130px; */
-  /* height: 60px; */
   display: flex;
   justify-content: flex-end;
 }
@@ -29,11 +26,6 @@
 .menu-logo{
   width: 60px;
   height: 60px;
-  /* margin-bottom: 5px; */
-  /* position: relative; */
-  /* display: block;
-  margin-left: auto;
-  margin-right: auto; */
 }
 
 .search-logo{
@@ -51,18 +43,11 @@
   text-orientation: upright;
   margin-left: auto;
   margin-right: auto;
-  /* position: absolute;
-  margin-top: 0;
-  margin-right: 0; */
 }
 
 .now-login-menu, .not-login-menu, .search-menu {
   list-style-type: none;
 }
-
-/* .header_button {
-  text-decoration: none;
-} */
 
 .menu-bar {
   margin: auto 15px;
