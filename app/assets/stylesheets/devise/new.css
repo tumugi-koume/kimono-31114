@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-.title {
+.user-title {
   font-size: 35px;
   writing-mode: vertical-rl;
 }
 
-.form {
+.user-form {
   width: 100%;
   margin-top: 70px;
   margin-bottom: 90px;
@@ -24,11 +24,11 @@
   align-items: center;
 }
 
-.field {
+.user-field {
   margin-bottom: 30px;
 }
 
-.field-name {
+.user-field-name {
   margin-bottom: 15px;
   font-size: 17px;
 }
