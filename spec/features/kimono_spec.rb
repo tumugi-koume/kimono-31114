@@ -50,8 +50,12 @@ feature '着物登録', type: :feature do
   context '着物の登録ができないとき' do
     scenario 'ログインしていないと着物登録画面に遷移できない' do
       # 着物登録画面へ遷移するボタンがあることを確認する
+      visit root_path
+      expect(page).to have_content('着物をしまう')
       # 着物登録画面に移動する
+      visit new_kimono_path
       # ログイン画面に遷移していることを確認する
+      expect(current_path).to eq  new_user_session_path
     end
   end
 end
