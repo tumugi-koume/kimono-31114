@@ -63,6 +63,7 @@ end
 feature '着物編集', type: :feature do
   before do
     @kimono1 = FactoryBot.create(:kimono)
+    @kimono2 = FactoryBot.create(:kimono)
   end
 
   context '登録した着物の情報を編集できる' do
