@@ -59,3 +59,35 @@ feature '着物登録', type: :feature do
     end
   end
 end
+
+feature '着物編集', type: :feature do
+  before do
+    @kimono1 = FactoryBot.create(:kimono)
+  end
+
+  context '登録した着物の情報を編集できる' do
+    scenario 'ログインしたユーザーは自分が登録した着物の情報の編集ができる' do
+      # kimono1を登録したユーザーでログインする
+      # 着物一覧ページに表示されたkimono1の画像から詳細画面に遷移できることを確認する
+      # kimono1の詳細画面に遷移する
+      # 詳細画面に「編集」ボタンがあることを確認する
+      # kimono1の編集画面に遷移する
+      # すでに登録済みの内容がフォームに入っていることを確認する
+      # 登録内容を編集する
+      # 編集ボタンを押してもKimonoモデルのカウントが変わらないことを確認する
+      # kimono1の詳細画面に遷移していることを確認する
+      # 詳細画面に先ほど変更した内容の登録が存在することを確認する
+    end
+  end
+
+  context '着物の情報の編集ができないとき' do
+    scenario 'ログインしたユーザーは自分以外が登録した着物の編集画面には遷移できない' do
+      # 
+    end
+
+    scenario 'ログインしていないと編集画面に遷移できない' do
+    end
+  end
+
+
+end
