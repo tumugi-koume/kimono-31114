@@ -63,7 +63,6 @@ end
 feature '着物編集', type: :feature do
   before do
     @kimono1 = FactoryBot.create(:kimono)
-    @kimono2 = FactoryBot.create(:kimono)
   end
 
   context '登録した着物の情報を編集できる' do
@@ -106,16 +105,12 @@ feature '着物編集', type: :feature do
   end
 
   context '着物の情報の編集ができないとき' do
-    scenario 'ログインしたユーザーは自分以外が登録した着物の編集画面には遷移できない' do
-      # kimono1を登録したユーザーでログインする
-      # kimono2の登録した着物が一覧に表示されていないことを確認する
-    end
-
     scenario 'ログインしていないと編集画面に遷移できない' do
       # トップページに移動する
-      # トップページに登録されたkimono1,kimono2が表示されていないことを確認する
+      visit root_path
+      # トップページに登録されたkimonoが表示されていないことを確認する
+      expect(page).to have_no_selector("img[src$='test_image.png']")
     end
   end
-
 
 end
