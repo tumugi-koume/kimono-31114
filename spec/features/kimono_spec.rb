@@ -69,24 +69,51 @@ feature '着物編集', type: :feature do
   context '登録した着物の情報を編集できる' do
     scenario 'ログインしたユーザーは自分が登録した着物の情報の編集ができる' do
       # kimono1を登録したユーザーでログインする
-      # 着物一覧ページに表示されたkimono1の画像から詳細画面に遷移できることを確認する
-      # kimono1の詳細画面に遷移する
+      visit new_user_session_path
+      fill_in 'Eメール', with: @kimono1.user.email
+      fill_in 'パスワード', with: @kimono1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # 着物一覧ページに表示されたkimono1の画像をクリックする
+      first(".to-show-img").click
+      # kimono1の詳細画面に遷移することを確認する
+      expect(current_path).to eq kimono_path(@kimono1)
       # 詳細画面に「編集」ボタンがあることを確認する
+      expect(page).to have_content('編集')
       # kimono1の編集画面に遷移する
-      # すでに登録済みの内容がフォームに入っていることを確認する
+      visit edit_kimono_path(@kimono1)
       # 登録内容を編集する
+      select '小紋', from: 'kimono_kimono_name_id'
+      select '単衣', from: 'kimono_kimono_genre_id'
+      select 'カジュアル', from: 'kimono_tpo_id'
+      select '絹', from: 'kimono_material_id'
+      fill_in 'season-text', with: '秋〜春'
+      fill_in 'color_pattern_text', with: '地色は藤色。桜の花柄。'
       # 編集ボタンを押してもKimonoモデルのカウントが変わらないことを確認する
+      expect{
+        find('input[name="commit"]').click
+      }.to change { Kimono.count }.by(0)
       # kimono1の詳細画面に遷移していることを確認する
+      expect(current_path).to eq kimono_path(@kimono1)
       # 詳細画面に先ほど変更した内容の登録が存在することを確認する
+      expect(page).to have_content("小紋")
+      expect(page).to have_content("単衣")
+      expect(page).to have_content("カジュアル")
+      expect(page).to have_content("絹")
+      expect(page).to have_content("秋〜春")
+      expect(page).to have_content("地色は藤色。桜の花柄。")
     end
   end
 
   context '着物の情報の編集ができないとき' do
     scenario 'ログインしたユーザーは自分以外が登録した着物の編集画面には遷移できない' do
-      # 
+      # kimono1を登録したユーザーでログインする
+      # kimono2の登録した着物が一覧に表示されていないことを確認する
     end
 
     scenario 'ログインしていないと編集画面に遷移できない' do
+      # トップページに移動する
+      # トップページに登録されたkimono1,kimono2が表示されていないことを確認する
     end
   end
 
