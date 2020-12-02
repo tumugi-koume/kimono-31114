@@ -114,3 +114,22 @@ feature '着物編集', type: :feature do
   end
 
 end
+
+feature '着物削除', type: :feature do
+  before do
+    @kimono = FactoryBot.create(:kimono)
+  end
+
+  context '着物の情報が削除できるとき' do
+    scenario 'ログインしたユーザーは自分の着物の情報を削除することができる' do
+      # ログインする
+      # 着物一覧ページに表示されたkimonoの画像をクリックする
+      # 詳細ページに移動していることを確認する
+      # 削除ボタンがあることを確認する
+      # 削除するとレコードの数が１減ることを確認する
+      # 着物一覧ページに遷移していることを確認する
+      # 一覧ページにkimonoの内容がないことを確認する（画像）
+      # 一覧ページにkimonoの内容がないことを確認する（種類名）
+    end
+  end
+end
