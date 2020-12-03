@@ -68,9 +68,26 @@ feature '着物詳細', type: :feature do
   context '登録した着物の詳細を見ることができる' do
     scenario 'ログインしたユーザーは登録した着物の詳細ページに遷移することができる' do
       # ログインする
-      # 着物一覧ページに表示されたkimono1の画像をクリックする
+      visit new_user_session_path
+      fill_in 'Eメール', with: @kimono.user.email
+      fill_in 'パスワード', with: @kimono.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      # 着物一覧ページに表示されたkimonoの画像をクリックする
+      first(".to-show-img").click
       # kimonoの詳細画面に遷移することを確認する
+      expect(current_path).to eq kimono_path(@kimono)
       # 詳細ページにkimonoの情報が表示されている
+      expect(page).to have_selector("img[src$='test_image.png']")
+      expect(page).to have_content("#{@kimono.kimono_name.name}")
+      expect(page).to have_content("#{@kimono.kimono_genre.name}")
+      expect(page).to have_content("#{@kimono.tpo.name}")
+      expect(page).to have_content("#{@kimono.material.name}")
+      expect(page).to have_content("#{@kimono.color_pattern}")
+      expect(page).to have_content("#{@kimono.season}")
+      expect(page).to have_content("#{@kimono.memo}")
+      expect(page).to have_content("#{@kimono.wore_date}")
+      expect(page).to have_content("#{@kimono.cleaned_date}")
     end
   end
 
