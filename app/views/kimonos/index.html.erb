@@ -17,8 +17,8 @@
         <% if user_signed_in? %>
         <% @kimonos.each do |kimono| %>
           <li class='list'>
-            <%= link_to kimono_path(kimono.id) do %>
-              <%= image_tag kimono.image.variant(resize: '300x300'), class: "goods-img" if kimono.image.attached?%>
+            <%= link_to kimono_path(kimono.id), class: 'to-show-img' do %>
+              <%= image_tag kimono.image.variant(resize: '300x300'), class: "goods-img", id: "goods-img" if kimono.image.attached?%>
               <div class='info'>
                 <div class='goods-name'>
                   <%= kimono.kimono_name.name %>

@@ -72,10 +72,6 @@ Password... test33
 '![demo](https://raw.github.com/wiki/tumugi-koume/kimono-31114/gif/search.image.gif)'<br>
 プルダウンでの検索ができ、より簡単に検索を行うことが可能です。
 
-## 実装予定の機能
-
-ヘッダーに設置する検索ページへのリンクバーは、作成中です。
-
 
 ## データベース設計
 

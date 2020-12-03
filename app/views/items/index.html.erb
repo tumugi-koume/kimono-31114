@@ -17,7 +17,7 @@
       <% if user_signed_in? %>
       <% @items.each do |item| %>
         <li class='list'>
-          <%= link_to item_path(item.id) do %>
+          <%= link_to item_path(item.id), class: 'to-show-img' do %>
             <%= image_tag item.image.variant(resize: '300x300'), class: "goods-img" if item.image.attached?%>
             <div class='info'>
               <div class='goods-name'>
