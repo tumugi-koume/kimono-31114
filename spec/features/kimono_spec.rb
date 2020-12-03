@@ -122,14 +122,28 @@ feature '着物削除', type: :feature do
 
   context '着物の情報が削除できるとき' do
     scenario 'ログインしたユーザーは自分の着物の情報を削除することができる' do
-      # ログインする
+      # ログインするvisit new_user_session_path
+      visit new_user_session_path
+      fill_in 'Eメール', with: @kimono.user.email
+      fill_in 'パスワード', with: @kimono.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
       # 着物一覧ページに表示されたkimonoの画像をクリックする
+      first(".to-show-img").click
       # 詳細ページに移動していることを確認する
+      expect(current_path).to eq kimono_path(@kimono)
       # 削除ボタンがあることを確認する
+      expect(page).to have_content('削除')
       # 削除するとレコードの数が１減ることを確認する
+      expect{
+        click_on '削除'
+      }.to change { Kimono.count }.by(-1)
       # 着物一覧ページに遷移していることを確認する
+      expect(current_path).to eq root_path
       # 一覧ページにkimonoの内容がないことを確認する（画像）
+      expect(page).to have_no_selector("img[src$='test_image.png']")
       # 一覧ページにkimonoの内容がないことを確認する（種類名）
+      expect(page).to have_no_content("#{@kimono.kimono_name.name}")
     end
   end
 end
