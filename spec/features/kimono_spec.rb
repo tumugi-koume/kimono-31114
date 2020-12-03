@@ -94,8 +94,10 @@ feature '着物詳細', type: :feature do
   context '着物の詳細を見ることができない' do
     scenario 'ログインしていないと着物の詳細ページに遷移できない' do
       # トップページに移動する
-      # kimonoが表示されていないことを確認する（画像）
-      # kimonoが表示されていないことを確認する（種類名）
+      visit root_path
+      # トップページに登録されたkimonoが表示されていないことを確認する
+      expect(page).to have_no_selector("img[src$='test_image.png']")
+      expect(page).to have_no_content("#{@kimono.kimono_name.name}")
     end
   end
 end
@@ -184,6 +186,15 @@ feature '着物削除', type: :feature do
       expect(page).to have_no_selector("img[src$='test_image.png']")
       # 一覧ページにkimonoの内容がないことを確認する（種類名）
       expect(page).to have_no_content("#{@kimono.kimono_name.name}")
+    end
+  end
+
+  context '着物の情報の削除ができないとき' do
+    scenario 'ログインしていないと編集画面に遷移できず削除できない' do
+      # トップページに移動する
+      visit root_path
+      # トップページに登録されたkimonoが表示されていないことを確認する
+      expect(page).to have_no_selector("img[src$='test_image.png']")
     end
   end
 end
