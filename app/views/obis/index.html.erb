@@ -17,7 +17,7 @@
       <% if user_signed_in? %>
       <% @obis.each do |obi| %>
         <li class='list'>
-          <%= link_to obi_path(obi.id) do %>
+          <%= link_to obi_path(obi.id), class: 'to-show-img' do %>
             <%= image_tag obi.image.variant(resize: '300x300'), class: "goods-img" if obi.image.attached?%>
             <div class='info'>
               <div class='goods-name'>
