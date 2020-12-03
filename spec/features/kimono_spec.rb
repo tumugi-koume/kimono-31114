@@ -60,6 +60,29 @@ feature '着物登録', type: :feature do
   end
 end
 
+feature '着物詳細', type: :feature do
+  before do
+    @kimono = FactoryBot.create(:kimono)
+  end
+
+  context '登録した着物の詳細を見ることができる' do
+    scenario 'ログインしたユーザーは登録した着物の詳細ページに遷移することができる' do
+      # ログインする
+      # 着物一覧ページに表示されたkimono1の画像をクリックする
+      # kimonoの詳細画面に遷移することを確認する
+      # 詳細ページにkimonoの情報が表示されている
+    end
+  end
+
+  context '着物の詳細を見ることができない' do
+    scenario 'ログインしていないと着物の詳細ページに遷移できない' do
+      # トップページに移動する
+      # kimonoが表示されていないことを確認する（画像）
+      # kimonoが表示されていないことを確認する（種類名）
+    end
+  end
+end
+
 feature '着物編集', type: :feature do
   before do
     @kimono1 = FactoryBot.create(:kimono)
