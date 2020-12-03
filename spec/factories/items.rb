@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :item do
-    item_name_id   { 2 }
-    tpo_id        { 4 }
-    color_pattern { "半身桜柄、藤色" }
-    season        { "春、秋" }
-    material_id   { 2 }
-    wore_date     { "2020/12/23"} 
-    cleaned_date  { "2019/04/09" }
-    memo          { "臈纈染め" }
+    item_name_id    { Faker::Number.within(range: 2..11) }
+    tpo_id          { Faker::Number.within(range: 2..6) }
+    color_pattern   { Faker::Lorem.characters(number: 40) }
+    season          { Faker::Lorem.characters(number: 40) }
+    material_id     { Faker::Number.within(range: 2..7) }
+    wore_date       { Faker::Date.between(from: '2020/01/01', to: '2021/12_31')} 
+    cleaned_date    { Faker::Date.between(from: '2010/01/01', to: '2021/12/31')}
+    memo            { Faker::Lorem.characters(number: 40) }
     association :user
 
     after(:build) do |item|
